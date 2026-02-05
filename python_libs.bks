@@ -1,0 +1,156 @@
+# ==================================================
+# IMPORT & LIBRARIES DEMO - PyKasi
+# Demonstrasi penggunaan Python libraries
+# ==================================================
+
+spill "=== PYTHON LIBRARIES DEMO ===";
+spill "";
+
+# ===== 1. MATH MODULE =====
+spill "1. Math Module";
+impor math;
+
+spill "   π (pi) = ";
+spill math.pi;
+
+spill "   e = ";
+spill math.e;
+
+spill "   sqrt(144) = ";
+spill math.sqrt(144);
+
+spill "   pow(2, 10) = ";
+spill math.pow(2, 10);
+
+spill "   sin(π/2) = ";
+spill math.sin(math.pi / 2);
+
+spill "";
+
+# ===== 2. RANDOM MODULE =====
+spill "2. Random Module";
+dari random impor randint, choice;
+
+angka_acak gas randint(1, 100);
+spill "   Random number (1-100): ";
+spill angka_acak;
+
+pilihan gas ["Bekasi", "Jakarta", "Depok", "Bogor"];
+kota_acak gas choice(pilihan);
+spill "   Random city: ";
+spill kota_acak;
+
+spill "";
+
+# ===== 3. DATETIME MODULE =====
+spill "3. Datetime Module";
+dari datetime impor datetime, date;
+
+sekarang gas datetime.now();
+spill "   Current datetime: ";
+spill sekarang;
+
+hari_ini gas date.today();
+spill "   Today's date: ";
+spill hari_ini;
+
+spill "";
+
+# ===== 4. JSON MODULE =====
+spill "4. JSON Module";
+impor json;
+
+data_dict gas {
+    "nama": "PyKasi",
+    "versi": "1.0",
+    "lokasi": "Bekasi",
+    "fitur": ["functions", "imports", "flask"]
+};
+
+json_string gas json.dumps(data_dict);
+spill "   JSON string: ";
+spill json_string;
+
+parsed gas json.loads(json_string);
+spill "   Parsed back - nama: ";
+spill parsed["nama"];
+
+spill "";
+
+# ===== 5. PATHLIB MODULE =====
+spill "5. Pathlib Module";
+dari pathlib impor Path;
+
+current_path gas Path(".");
+spill "   Current path: ";
+spill current_path;
+
+spill "";
+
+# ===== 6. STRING & COLLECTIONS =====
+spill "6. String & Collections";
+dari string impor ascii_lowercase;
+dari collections impor Counter;
+
+spill "   ASCII lowercase: ";
+spill ascii_lowercase;
+
+kata gas "bekasi coding programming";
+counter gas Counter(kata);
+spill "   Character count in 'bekasi coding programming':";
+spill "   'a' appears: ";
+spill counter["a"];
+spill "   times";
+
+spill "";
+
+# ===== 7. CUSTOM FUNCTION USING IMPORTS =====
+spill "7. Custom Functions with Imports";
+
+fungsi hitung_lingkaran(radius) {
+    luas gas math.pi * radius * radius;
+    keliling gas 2 * math.pi * radius;
+    
+    hasil gas {
+        "radius": radius,
+        "luas": luas,
+        "keliling": keliling
+    };
+    
+    balikin hasil;
+}
+
+circle gas hitung_lingkaran(5);
+spill "   Circle with radius 5:";
+spill "   Area: ";
+spill circle["luas"];
+spill "   Circumference: ";
+spill circle["keliling"];
+
+spill "";
+
+# ===== 8. TIME MODULE =====
+spill "8. Time Module";
+impor time;
+
+spill "   Current timestamp: ";
+spill time.time();
+
+waktu_readable gas time.ctime();
+spill "   Readable time: ";
+spill waktu_readable;
+
+spill "";
+
+# ===== SUMMARY =====
+spill "=== LIBRARY INTEGRATION SUMMARY ===";
+spill "✓ Math calculations";
+spill "✓ Random numbers & choices";
+spill "✓ Date & time operations";
+spill "✓ JSON encoding/decoding";
+spill "✓ Path operations";
+spill "✓ String utilities";
+spill "✓ Collections tools";
+spill "✓ Time operations";
+spill "";
+spill "PyKasi can use SAFE Python libraries! 🚀🔒";

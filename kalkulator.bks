@@ -1,0 +1,70 @@
+# Kalkulator PyKasi - Demo semua operasi matematika
+
+spill "=== KALKULATOR PYKASI ===";
+spill "";
+
+# 1. Operasi Dasar
+spill "1. OPERASI DASAR";
+duit a gas 10;
+duit b gas 3;
+
+spill "   a = 10, b = 3";
+duit tambah gas a + b;
+spill "   Penjumlahan: 10 + 3 = ";
+spill tambah;
+
+duit kurang gas a - b;
+spill "   Pengurangan: 10 - 3 = ";
+spill kurang;
+
+duit kali gas a * b;
+spill "   Perkalian: 10 * 3 = ";
+spill kali;
+
+duit bagi gas a / b;
+spill "   Pembagian: 10 / 3 = ";
+spill bagi;
+
+duit sisa gas a % b;
+spill "   Modulo: 10 % 3 = ";
+spill sisa;
+
+duit pangkat gas a ** b;
+spill "   Pangkat: 10 ** 3 = ";
+spill pangkat;
+
+spill "";
+
+# 2. Bilangan Desimal
+spill "2. BILANGAN DESIMAL";
+duit pi gas 3.14159;
+duit r gas 5.0;
+
+spill "   pi = 3.14159, r = 5.0";
+duit luas gas pi * r * r;
+spill "   Luas lingkaran (pi * r * r) = ";
+spill luas;
+
+spill "";
+
+# 3. Operasi Kompleks
+spill "3. OPERASI KOMPLEKS";
+duit x gas 2;
+duit y gas 3;
+duit z gas 4;
+
+spill "   x = 2, y = 3, z = 4";
+duit hasil gas (x + y) * z;
+spill "   (2 + 3) * 4 = ";
+spill hasil;
+
+duit hasil2 gas x ** y + z;
+spill "   2 ** 3 + 4 = ";
+spill hasil2;
+
+duit hasil3 gas (x + y) ** z;
+spill "   (2 + 3) ** 4 = ";
+spill hasil3;
+
+spill "";
+spill "=== KALKULATOR SIAP DIPAKAI! ===";

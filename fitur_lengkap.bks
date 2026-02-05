@@ -1,0 +1,212 @@
+# ==================================================
+# PYKASI - Fitur Lengkap (Versi Bekasi)
+# Demo semua fitur modern ala RenzmcLang
+# ==================================================
+
+spill "=== DEMO FITUR PYKASI ===";
+spill "";
+
+# ==================================================
+# 1. FUNGSI (Functions)
+# ==================================================
+spill "1. FUNGSI (Functions)";
+
+fungsi tambah(a, b) {
+    balikin a + b;
+}
+
+fungsi kali(x, y) {
+    balikin x * y;
+}
+
+duit hasil1 gas tambah(5, 3);
+spill "   tambah(5, 3) = ";
+spill hasil1;
+
+duit hasil2 gas kali(4, 6);
+spill "   kali(4, 6) = ";
+spill hasil2;
+
+spill "";
+
+# ==================================================
+# 2. FUNGSI TANPA PARAMETER
+# ==================================================
+spill "2. FUNGSI TANPA PARAMETER";
+
+fungsi sapa() {
+    balikin "Halo dari Bekasi!";
+}
+
+omongan sapaan gas sapa();
+spill "   sapa() = ";
+spill sapaan;
+
+spill "";
+
+# ==================================================
+# 3. LIST / ARRAY (Gudang)
+# ==================================================
+spill "3. LIST / ARRAY (Gudang)";
+
+angka gas [1, 2, 3, 4, 5];
+spill "   List angka: [1, 2, 3, 4, 5]";
+spill "   Elemen pertama (index 0): ";
+spill angka[0];
+spill "   Elemen ketiga (index 2): ";
+spill angka[2];
+
+kota gas ["Bekasi", "Jakarta", "Depok"];
+spill "   List kota: ['Bekasi', 'Jakarta', 'Depok']";
+spill "   Kota pertama: ";
+spill kota[0];
+
+spill "";
+
+# ==================================================
+# 4. BUILT-IN FUNCTIONS (Fungsi Bawaan)
+# ==================================================
+spill "4. BUILT-IN FUNCTIONS";
+
+data gas [5, 2, 8, 1, 9];
+spill "   List: [5, 2, 8, 1, 9]";
+
+duit len_data gas panjang(data);
+spill "   panjang(data) = ";
+spill len_data;
+
+duit max_data gas maks(5, 2, 8, 1, 9);
+spill "   maks(5, 2, 8, 1, 9) = ";
+spill max_data;
+
+duit min_data gas min(5, 2, 8, 1, 9);
+spill "   min(5, 2, 8, 1, 9) = ";
+spill min_data;
+
+spill "";
+
+# ==================================================
+# 5. FUNGSI DENGAN KONDISI
+# ==================================================
+spill "5. FUNGSI DENGAN KONDISI";
+
+fungsi cek_ganjil(n) {
+    kalo n % 2 == 1 {
+        balikin valid;
+    }
+    balikin hoax;
+}
+
+cek gas cek_ganjil(7);
+spill "   cek_ganjil(7) = ";
+spill cek;
+
+cek2 gas cek_ganjil(8);
+spill "   cek_ganjil(8) = ";
+spill cek2;
+
+spill "";
+
+# ==================================================
+# 6. FUNGSI REKURSIF
+# ==================================================
+spill "6. FUNGSI REKURSIF";
+
+fungsi faktorial(n) {
+    kalo n <= 1 {
+        balikin 1;
+    }
+    balikin n * faktorial(n - 1);
+}
+
+duit fakt5 gas faktorial(5);
+spill "   faktorial(5) = ";
+spill fakt5;
+
+spill "";
+
+# ==================================================
+# 7. LOOP DENGAN BREAK DAN CONTINUE
+# ==================================================
+spill "7. LOOP DENGAN BREAK DAN CONTINUE";
+
+spill "   Loop dengan berhenti (break):";
+duit j gas 0;
+puterin j < 10 {
+    kalo j == 5 {
+        berhenti;
+    }
+    spill j;
+    j gas j + 1;
+}
+
+spill "   Loop dengan terus (continue):";
+duit k gas 0;
+puterin k < 5 {
+    k gas k + 1;
+    kalo k == 3 {
+        terus;
+    }
+    spill k;
+}
+
+spill "";
+
+# ==================================================
+# 8. TRY-CATCH (Error Handling)
+# ==================================================
+spill "8. TRY-CATCH (Error Handling)";
+
+coba {
+    duit pembagian gas 10 / 2;
+    spill "   10 / 2 = ";
+    spill pembagian;
+} tangkep {
+    spill "   Error terjadi!";
+}
+
+spill "";
+
+# ==================================================
+# 9. OPERASI STRING
+# ==================================================
+spill "9. OPERASI STRING";
+
+omongan nama gas "Bekasi";
+omongan sapaan2 gas "Halo " + nama;
+spill "   'Halo ' + 'Bekasi' = ";
+spill sapaan2;
+
+omongan ulang gas "Gas! " * 3;
+spill "   'Gas! ' * 3 = ";
+spill ulang;
+
+spill "";
+
+# ==================================================
+# 10. PERBANDINGAN LENGKAP
+# ==================================================
+spill "10. PERBANDINGAN LENGKAP";
+
+duit a gas 10;
+duit b gas 5;
+
+spill "   a = 10, b = 5";
+cek1 gas a > b;
+spill "   a > b = ";
+spill cek1;
+
+cek2 gas a < b;
+spill "   a < b = ";
+spill cek2;
+
+cek3 gas a == 10;
+spill "   a == 10 = ";
+spill cek3;
+
+cek4 gas b != 5;
+spill "   b != 5 = ";
+spill cek4;
+
+spill "";
+spill "=== SELESAI! PYKASI MAKIN CANGGIH! ===";

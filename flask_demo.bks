@@ -1,0 +1,93 @@
+# ==================================================
+# FLASK + PYKASI INTEGRATION DEMO
+# Demonstrasi Flask Web Framework dengan PyKasi
+# ==================================================
+
+spill "=== FLASK INTEGRATION DEMO ===";
+spill "";
+
+# 1. Import Flask modules
+spill "1. Importing Flask modules...";
+dari flask impor Flask, jsonify, request;
+spill "   ✓ Flask modules imported!";
+spill "";
+
+# 2. Create Flask application
+spill "2. Creating Flask application...";
+app gas Flask("pykasi_web");
+spill "   ✓ Flask app created: pykasi_web";
+spill "";
+
+# 3. Test Flask methods
+spill "3. Testing Flask functionality...";
+spill "   App name: ";
+spill app.name;
+spill "";
+
+# 4. Import Python libraries for web development
+spill "4. Importing additional libraries...";
+impor json;
+spill "   ✓ json module imported";
+
+dari datetime impor datetime;
+spill "   ✓ datetime imported";
+spill "";
+
+# 5. Test JSON functionality
+spill "5. Testing JSON operations...";
+data gas {"nama": "PyKasi", "versi": "1.0", "aktif": valid};
+json_str gas json.dumps(data);
+spill "   JSON string: ";
+spill json_str;
+spill "";
+
+# 6. Test datetime
+spill "6. Testing datetime...";
+sekarang gas datetime.now();
+spill "   Current time: ";
+spill sekarang;
+spill "";
+
+# 7. Create sample data
+spill "7. Creating sample data...";
+pengguna gas [
+    {"id": 1, "nama": "Andi", "kota": "Bekasi"},
+    {"id": 2, "nama": "Budi", "kota": "Jakarta"},
+    {"id": 3, "nama": "Citra", "kota": "Depok"}
+];
+spill "   ✓ User data created:";
+spill "   Total users: ";
+spill panjang(pengguna);
+spill "";
+
+# 8. Fungsi untuk process data
+spill "8. Creating helper functions...";
+
+fungsi format_user(user) {
+    nama gas user["nama"];
+    kota gas user["kota"];
+    result gas nama + " dari " + kota;
+    balikin result;
+}
+
+spill "   ✓ Helper function created";
+spill "";
+
+# 9. Test function
+spill "9. Testing helper function...";
+formatted gas format_user(pengguna[0]);
+spill "   ";
+spill formatted;
+spill "";
+
+# 10. Summary
+spill "=== INTEGRATION TEST SUMMARY ===";
+spill "✓ Flask imported successfully";
+spill "✓ Flask app created";
+spill "✓ JSON operations working";
+spill "✓ DateTime working";
+spill "✓ Data structures working";
+spill "✓ Custom functions working";
+spill "";
+spill "PyKasi is ready for web development!";
+spill "Run 'python flask_runner.py' to start the web server.";

@@ -1,0 +1,28 @@
+# ==================================================
+# FIBONACCI - PyKasi
+# Menghitung deret Fibonacci dengan rekursif
+# ==================================================
+
+spill "=== FIBONACCI DENGAN PYKASI ===";
+spill "";
+
+# Fungsi rekursif untuk fibonacci
+fungsi fib(n) {
+    kalo n <= 1 {
+        balikin n;
+    }
+    balikin fib(n - 1) + fib(n - 2);
+}
+
+# Hitung 10 angka pertama fibonacci
+spill "10 angka pertama deret Fibonacci:";
+
+duit i gas 0;
+puterin i < 10 {
+    duit hasil gas fib(i);
+    spill hasil;
+    i gas i + 1;
+}
+
+spill "";
+spill "=== SELESAI ===";

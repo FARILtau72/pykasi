@@ -1,0 +1,46 @@
+# ==================================================
+# SORTING - PyKasi
+# Demo sorting dengan berbagai cara
+# ==================================================
+
+spill "=== SORTING DI PYKASI ===";
+spill "";
+
+# Data acak
+data gas [64, 34, 25, 12, 22, 11, 90];
+
+spill "Data asli:";
+spill data;
+spill "";
+
+# Bubble sort manual
+fungsi bubble_sort(arr) {
+    duit n gas panjang(arr);
+    duit i gas 0;
+    
+    puterin i < n {
+        duit j gas 0;
+        puterin j < n - i - 1 {
+            kalo arr[j] > arr[j + 1] {
+                # Swap elements
+                duit temp gas arr[j];
+                arr[j] gas arr[j + 1];
+                arr[j + 1] gas temp;
+            }
+            j gas j + 1;
+        }
+        i gas i + 1;
+    }
+    
+    balikin arr;
+}
+
+# Copy untuk sorting
+data_copy gas [64, 34, 25, 12, 22, 11, 90];
+sorted_data gas bubble_sort(data_copy);
+
+spill "Setelah bubble sort:";
+spill sorted_data;
+
+spill "";
+spill "=== SELESAI ===";
