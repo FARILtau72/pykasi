@@ -1,0 +1,9 @@
+spill "PyKasi singkat";
+
+duit i gas 0;
+puterin i < 3 {
+    spill i;
+    i gas i + 1;
+}
+
+spill "Selesai";
