@@ -1,0 +1,65 @@
+{
+  "name": "pykasi-language",
+  "displayName": "PyKasi Language Support",
+  "description": "Bahasa pemrograman lokal dengan syntax yang mudah dipahami orang Indonesia",
+  "version": "1.0.0",
+  "publisher": "pykasi-dev",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Themes"
+  ],
+  "icon": "assets/logo.png",
+  "contributes": {
+    "languages": [
+      {
+        "id": "pykasi",
+        "aliases": ["PyKasi", "pykasi", "Bekasi"],
+        "extensions": [".bks"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "assets/logo.svg",
+          "dark": "assets/logo.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pykasi",
+        "scopeName": "source.pykasi",
+        "path": "./syntaxes/pykasi.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "pykasi",
+        "path": "./snippets/pykasi-snippets.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "PyKasi Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pykasi-dark.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pykasi/pykasi"
+  },
+  "keywords": [
+    "pykasi",
+    "bekasi",
+    "indonesian",
+    "programming language",
+    "bahasa indonesia"
+  ],
+  "author": {
+    "name": "PyKasi Team"
+  },
+  "license": "MIT"
+}
