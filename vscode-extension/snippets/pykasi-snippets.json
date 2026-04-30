@@ -1,0 +1,131 @@
+{
+  "Print Statement": {
+    "prefix": "spill",
+    "body": "spill ${1:expr};",
+    "description": "Print statement (spill)"
+  },
+  "Variable Assignment": {
+    "prefix": "gas",
+    "body": "${1:name} GAS ${2:value};",
+    "description": "Variable assignment (gas)"
+  },
+  "Typed Variable (duit)": {
+    "prefix": "duit",
+    "body": "duit ${1:name} GAS ${2:value};",
+    "description": "Declare numeric variable (duit)"
+  },
+  "Typed Variable (omongan)": {
+    "prefix": "omongan",
+    "body": "omongan ${1:name} GAS ${2:value};",
+    "description": "Declare string variable (omongan)"
+  },
+  "Typed Variable (valid)": {
+    "prefix": "valid",
+    "body": "valid ${1:name} GAS ${2:value};",
+    "description": "Declare boolean variable (valid)"
+  },
+  "If Statement": {
+    "prefix": "kalo",
+    "body": [
+      "kalo ${1:condition} {",
+      "\t${2:// code}",
+      "}"
+    ],
+    "description": "If statement (kalo)"
+  },
+  "If-Else Statement": {
+    "prefix": "kaloelse",
+    "body": [
+      "kalo ${1:condition} {",
+      "\t${2:// code}",
+      "} kalo_kaga {",
+      "\t${3:// else code}",
+      "}"
+    ],
+    "description": "If-else statement"
+  },
+  "While Loop": {
+    "prefix": "puterin",
+    "body": [
+      "puterin ${1:condition} {",
+      "\t${2:// code}",
+      "}"
+    ],
+    "description": "While loop (puterin)"
+  },
+  "Function Definition": {
+    "prefix": "fungsi",
+    "body": [
+      "fungsi ${1:name}(${2:params}) {",
+      "\t${3:// code}",
+      "\tbalikin ${4:result};",
+      "}"
+    ],
+    "description": "Function definition (fungsi)"
+  },
+  "Return Statement": {
+    "prefix": "balikin",
+    "body": "balikin ${1:value};",
+    "description": "Return statement (balikin)"
+  },
+  "Lambda Function": {
+    "prefix": "lamda",
+    "body": "lamda (${1:params}) => ${2:expr}",
+    "description": "Lambda function"
+  },
+  "Try-Catch": {
+    "prefix": "coba",
+    "body": [
+      "coba {",
+      "\t${1:// code}",
+      "} tangkep {",
+      "\t${2:// catch code}",
+      "}"
+    ],
+    "description": "Try-catch block"
+  },
+  "Continue Statement": {
+    "prefix": "terus",
+    "body": "terus;",
+    "description": "Continue statement"
+  },
+  "Break Statement": {
+    "prefix": "berhenti",
+    "body": "berhenti;",
+    "description": "Break statement"
+  },
+  "Import Module": {
+    "prefix": "impor",
+    "body": "impor ${1:module};",
+    "description": "Import module"
+  },
+  "Import From Module": {
+    "prefix": "dari",
+    "body": "dari ${1:module} impor ${2:name};",
+    "description": "Import from module"
+  },
+  "Import As": {
+    "prefix": "imporsbg",
+    "body": "impor ${1:module} sebagai ${2:alias};",
+    "description": "Import module with alias"
+  },
+  "List Declaration": {
+    "prefix": "gudang",
+    "body": "gudang ${1:name} GAS [${2:items}];",
+    "description": "List declaration (gudang)"
+  },
+  "Dictionary Declaration": {
+    "prefix": "catetan",
+    "body": "catetan ${1:name} GAS {${2:pairs}};",
+    "description": "Dictionary declaration (catetan)"
+  },
+  "For Range Loop": {
+    "prefix": "dalam",
+    "body": [
+      "puterin ${1:item} dalam ${2:iterable} {",
+      "\t${3:// code}",
+      "}"
+    ],
+    "description": "For-in loop (dalam)"
+  }
+}

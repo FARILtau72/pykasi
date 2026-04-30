@@ -1,0 +1,110 @@
+{
+  "name": "PyKasi Dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1e1e2e",
+    "editor.foreground": "#cdd6f4",
+    "activityBar.background": "#181825",
+    "sideBar.background": "#181825",
+    "statusBar.background": "#89b4fa",
+    "statusBar.foreground": "#1e1e2e"
+  },
+  "tokenColors": [
+    {
+      "scope": ["comment", "comment.line.number-sign.pykasi"],
+      "settings": {
+        "foreground": "#6c7086",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": ["string", "string.quoted.double.pykasi"],
+      "settings": {
+        "foreground": "#a6e3a1"
+      }
+    },
+    {
+      "scope": ["constant.numeric", "constant.numeric.integer.pykasi", "constant.numeric.float.pykasi"],
+      "settings": {
+        "foreground": "#fab387"
+      }
+    },
+    {
+      "scope": ["keyword.control.conditional.pykasi"],
+      "settings": {
+        "foreground": "#f38ba8",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": ["keyword.control.loop.pykasi"],
+      "settings": {
+        "foreground": "#cba6f7",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": ["keyword.control.flow.pykasi"],
+      "settings": {
+        "foreground": "#f38ba8"
+      }
+    },
+    {
+      "scope": ["keyword.control.exception.pykasi"],
+      "settings": {
+        "foreground": "#eba0ac"
+      }
+    },
+    {
+      "scope": ["keyword.declaration.function.pykasi"],
+      "settings": {
+        "foreground": "#89b4fa",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": ["keyword.declaration.variable.pykasi"],
+      "settings": {
+        "foreground": "#94e2d5",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": ["keyword.other.import.pykasi"],
+      "settings": {
+        "foreground": "#f9e2af"
+      }
+    },
+    {
+      "scope": ["keyword.other.statement.pykasi"],
+      "settings": {
+        "foreground": "#89dceb"
+      }
+    },
+    {
+      "scope": ["keyword.operator"],
+      "settings": {
+        "foreground": "#94e2d5"
+      }
+    },
+    {
+      "scope": ["entity.name.function.pykasi"],
+      "settings": {
+        "foreground": "#89b4fa",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": ["variable.other.pykasi"],
+      "settings": {
+        "foreground": "#cdd6f4"
+      }
+    },
+    {
+      "scope": ["punctuation"],
+      "settings": {
+        "foreground": "#9399b2"
+      }
+    }
+  ]
+}

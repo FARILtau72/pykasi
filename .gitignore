@@ -1,6 +1,43 @@
+```
+# Dependencies
+node_modules/
+
+# Editor/IDE files
+.vscode/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Python
 __pycache__/
-.pytest_cache/
-.venv/
+*.pyc
+*.pyo
+*.pyd
+
+# Build outputs
 dist/
 build/
-*.pyc
+*.egg-info/
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+
+# MyPy
+.mypy_cache/
+
+# PyTest
+.pytest_cache/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+```
