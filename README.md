@@ -16,6 +16,15 @@
 - ✅ **Python library imports** (impor) untuk akses ekosistem Python
 - ✅ **Flask web framework** support untuk bikin web app
 
+## 🌐 Homepage
+
+Homepage PyKasi ada di [`docs/index.html`](docs/index.html), lengkap dengan contoh
+sintaks, output, dan panduan mulai. Buka file itu langsung di browser, atau
+jalankan `python -m http.server 8000 --directory docs` dari root repository lalu
+buka `http://localhost:8000`.
+
+Lihat [panduan homepage](docs/README.md) untuk struktur file dan hosting statis.
+
 ---
 
 ## 🚀 Tutorial Instalasi (Wajib Baca!)
