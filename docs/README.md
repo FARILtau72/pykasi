@@ -29,10 +29,22 @@ Lalu buka `http://localhost:8000`. Hanya folder `docs/` yang perlu disajikan.
 
 ## Hosting
 
-Folder `docs/` siap untuk hosting statis, termasuk GitHub Pages. Setelah perubahan
-di-merge, pemilik repository dapat mengatur Pages agar menyajikan folder `/docs`
-dari branch `main`. PR homepage tidak mengaktifkan hosting atau mengubah pengaturan
-repository secara otomatis.
+Folder `docs/` siap untuk hosting statis, termasuk GitHub Pages. Ada dua pilihan
+sumber GitHub Pages dari branch `main`:
+
+- `/docs`: langsung menyajikan homepage.
+- `/ (root)`: `index.html` di root mengarahkan pengunjung ke `docs/index.html`.
+  File `.nojekyll` di root memastikan file statis disajikan apa adanya, sehingga
+  halaman utama tidak lagi dibuat dari README oleh Jekyll.
+
+Pengalihan dari root mempertahankan query string dan anchor (misalnya `#mulai`)
+ketika JavaScript aktif. Tanpa JavaScript, meta refresh menuju homepage; tombol
+tautan tetap tersedia jika browser memblokir pengalihan otomatis. Tampilan utama
+tetap dipelihara di satu tempat, yaitu `docs/index.html`.
+
+Perubahan ini tidak mengaktifkan hosting atau mengubah pengaturan repository
+secara otomatis. Jika Pages sudah menyajikan root, pengalihan berlaku setelah
+commit yang memuatnya selesai dipublikasikan oleh Pages.
 
 Seluruh URL aset bersifat relatif sehingga homepage bisa disajikan di root domain
 maupun subpath seperti `/pykasi/`.
