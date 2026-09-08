@@ -1,9 +1,32 @@
-# 🪐 PyKasi (Python Bekasi)
+# 🪐 PyKasi 0.2 — Python Bekasi
 
 > **"Coding rasa nongkrong di kalimalang."**
-> 👨‍💻 **Lead Developer:** [FARILtau72](https://www.google.com/search?q=https://github.com/FARILtau72)
+> 👨‍💻 **Lead Developer:** [FARILtau72](https://github.com/FARILtau72)
 
 **PyKasi** adalah interpreter bahasa pemrograman esoterik yang dibangun di atas Python. Tujuannya simpel: Mengganti syntax Python yang kaku jadi bahasa tongkrongan Bekasi yang *valid*. Dibangun dengan arsitektur modular menggunakan **PLY (Python Lex-Yacc)**, bikin code ini enak dibaca developer tapi bikin sakit kepala user kalau sampe error (karena error message-nya ngegas).
+
+## 🗣️ Ngomong Bekasi, ngoding PyKasi
+
+Sintaks utama sekarang pakai `bacot`, `danta`, `kagadanta`, `kaga`, dan operator
+kata seperti `tambah`. Lihat [kamus sintaks 0.2](SINTAKS.md) untuk seluruh aturan.
+
+```pykasi
+omongan asal gas "Bekasi";
+bacot "Woy, " tambah asal tambah "!";
+danta paham gas danta;
+kalo paham {
+    bacot 10000 tambah 5000;
+} kaga {
+    bacot "Kagadanta? Tanya dulu, bre.";
+}
+```
+
+`danta` = `True`, `kagadanta` = `False`; kapitalisasi seperti `Kagadanta` juga
+boleh. `bacot` = `spill`, `kaga` = `kalo_kaga`. Operator kata: `tambah`, `kurang`,
+`kali`, `bagi`, `sisa`, `pangkat`. Sintaks lama tetap didukung; operator kata juga
+masih bisa dipakai sebagai nama fungsi/variabel. Empat kata baru `bacot`, `kaga`,
+`danta`, dan `kagadanta` kini menjadi kata kunci. Jalankan demo terbaru:
+`python main.py bekasi.bks`.
 
 **Fitur-fitur modern PyKasi:**
 - ✅ **Function definitions** (`fungsi`) dengan return values
@@ -94,7 +117,7 @@ Buat lu yang mau kontribusi atau kepo isinya, ini peta strukturnya. Kita pake ko
 
 | File / Folder | Fungsi & Tanggung Jawab |
 | --- | --- |
-| **`src/`** | **Folder Inti.** Semua otak program ada di sini. |
+| **`pykasi/`** | **Folder Inti.** Semua otak program ada di sini. |
 | ├── `lexer.py` | **Si Pemecah Kata.** Tugasnya baca kode `.bks` lu dan misahin jadi token (Misal: `spill` diubah jadi token `PRINT`). |
 | ├── `parser.py` | **Si Polisi Tata Bahasa.** Tugasnya ngecek urutan kode. Kalau abis `kalo` gak ada kondisi, dia yang teriak error. |
 | ├── `interpreter.py` | **Si Eksekutor.** Mesin utama yang ngejalanin logika program. Di sini juga tempat nyimpen variabel & error handling "ngegas". |
@@ -111,7 +134,7 @@ Jangan sampe salah panggil, nanti dimarahin interpreter.
 
 | PyKasi | Python Asli | Deskripsi |
 | --- | --- | --- |
-| `spill` | `print()` | Buat nampilin teks ke layar. |
+| `bacot` / `spill` | `print()` | Buat nampilin teks ke layar. |
 | `gas` | `=` | Buat masukin nilai ke variabel. |
 | `duit` | `int` | Tipe data angka bulat. |
 | `omongan` | `string` | Tipe data tulisan/teks. |
@@ -121,10 +144,10 @@ Jangan sampe salah panggil, nanti dimarahin interpreter.
 | PyKasi | Python Asli | Deskripsi |
 | --- | --- | --- |
 | `kalo` | `if` | Kondisi awal. |
-| `kalo_kaga` | `else` | Kondisi terakhir (kalau semua salah). |
+| `kaga` / `kalo_kaga` | `else` | Kondisi terakhir (kalau semua salah). |
 | `puterin` | `while` | Perulangan selama kondisi valid. |
-| `valid` | `True` | Benar. |
-| `hoax` | `False` | Salah. |
+| `danta` / `valid` | `True` | Benar. |
+| `kagadanta` / `hoax` | `False` | Salah. |
 | `terus` | `continue` | Lanjut ke iterasi berikutnya. |
 | `berhenti` | `break` | Berhenti dari loop. |
 
@@ -171,12 +194,12 @@ Jangan sampe salah panggil, nanti dimarahin interpreter.
 
 | Operator | Deskripsi |
 | --- | --- |
-| `+` | Tambah (angka/string/list). |
-| `-` | Kurang (angka). |
-| `*` | Kali (angka), atau repeat (string/list). |
-| `/` | Bagi (angka). |
-| `%` | Modulo/sisa bagi (angka). |
-| `**` | Pangkat (angka). |
+| `tambah` / `+` | Tambah (angka/string/list). |
+| `kurang` / `-` | Kurang (angka). |
+| `kali` / `*` | Kali (angka), atau repeat (string/list). |
+| `bagi` / `/` | Bagi (angka). |
+| `sisa` / `%` | Modulo/sisa bagi (angka). |
+| `pangkat` / `**` | Pangkat (angka). |
 | `==` | Sama dengan. |
 | `!=` | Tidak sama dengan. |
 | `>` | Lebih besar. |
@@ -298,5 +321,5 @@ Mau nambahin fitur? Mau bikin error message-nya makin pedes? Gas aja!
 
 ---
 
-**Original Project by [FARILtau72**](https://www.google.com/search?q=https://github.com/FARILtau72)
+**Original Project by [FARILtau72**](https://github.com/FARILtau72)
 *Dibuat dengan Python, Kopi, dan Emosi.*

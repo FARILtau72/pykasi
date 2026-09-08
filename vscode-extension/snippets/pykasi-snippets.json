@@ -1,131 +1,148 @@
 {
-  "Print Statement": {
-    "prefix": "spill",
-    "body": "spill ${1:expr};",
-    "description": "Print statement (spill)"
+  "Bacot": {
+    "prefix": [
+      "bacot",
+      "spill"
+    ],
+    "body": "bacot ${1:\"Woy, Bekasi!\"};",
+    "description": "Tampilkan nilai ke layar."
   },
-  "Variable Assignment": {
+  "Kasih nilai": {
     "prefix": "gas",
-    "body": "${1:name} GAS ${2:value};",
-    "description": "Variable assignment (gas)"
+    "body": "${1:nama} gas ${2:\"Bekasi\"};",
+    "description": "Isi variabel."
   },
-  "Typed Variable (duit)": {
+  "Duit": {
     "prefix": "duit",
-    "body": "duit ${1:name} GAS ${2:value};",
-    "description": "Declare numeric variable (duit)"
+    "body": "duit ${1:patungan} gas ${2:10000};",
+    "description": "Variabel angka."
   },
-  "Typed Variable (omongan)": {
+  "Omongan": {
     "prefix": "omongan",
-    "body": "omongan ${1:name} GAS ${2:value};",
-    "description": "Declare string variable (omongan)"
+    "body": "omongan ${1:asal} gas ${2:\"Bekasi\"};",
+    "description": "Variabel teks."
   },
-  "Typed Variable (valid)": {
-    "prefix": "valid",
-    "body": "valid ${1:name} GAS ${2:value};",
-    "description": "Declare boolean variable (valid)"
+  "Danta": {
+    "prefix": [
+      "danta",
+      "valid"
+    ],
+    "body": "danta ${1:paham} gas ${2:danta};",
+    "description": "Variabel boolean benar atau salah."
   },
-  "If Statement": {
+  "Kagadanta": {
+    "prefix": "kagadanta",
+    "body": "${1:paham} gas kagadanta;",
+    "description": "Isi variabel dengan False."
+  },
+  "Kalo": {
     "prefix": "kalo",
     "body": [
-      "kalo ${1:condition} {",
-      "\t${2:// code}",
+      "kalo ${1:danta} {",
+      "\tbacot ${2:\"Danta, bre.\"};",
       "}"
     ],
-    "description": "If statement (kalo)"
+    "description": "Jalankan kalau kondisi benar."
   },
-  "If-Else Statement": {
-    "prefix": "kaloelse",
+  "Kalo kaga": {
+    "prefix": [
+      "kalokaga",
+      "kaloelse"
+    ],
     "body": [
-      "kalo ${1:condition} {",
-      "\t${2:// code}",
-      "} kalo_kaga {",
-      "\t${3:// else code}",
+      "kalo ${1:danta} {",
+      "\tbacot ${2:\"Gas lanjut.\"};",
+      "} kaga {",
+      "\tbacot ${3:\"Tanya dulu, bre.\"};",
       "}"
     ],
-    "description": "If-else statement"
+    "description": "Percabangan dengan else."
   },
-  "While Loop": {
+  "Puterin": {
     "prefix": "puterin",
     "body": [
-      "puterin ${1:condition} {",
-      "\t${2:// code}",
+      "duit ${1:putaran} gas 1;",
+      "puterin ${1:putaran} <= ${2:3} {",
+      "\tbacot ${1:putaran};",
+      "\t${1:putaran} gas ${1:putaran} tambah 1;",
       "}"
     ],
-    "description": "While loop (puterin)"
+    "description": "Perulangan dengan penghitung."
   },
-  "Function Definition": {
+  "Fungsi": {
     "prefix": "fungsi",
     "body": [
-      "fungsi ${1:name}(${2:params}) {",
-      "\t${3:// code}",
-      "\tbalikin ${4:result};",
+      "fungsi ${1:tambah}(${2:a}, ${3:b}) {",
+      "\tbalikin ${2:a} tambah ${3:b};",
       "}"
     ],
-    "description": "Function definition (fungsi)"
+    "description": "Fungsi yang mengembalikan nilai."
   },
-  "Return Statement": {
+  "Balikin": {
     "prefix": "balikin",
-    "body": "balikin ${1:value};",
-    "description": "Return statement (balikin)"
+    "body": "balikin ${1:hasil};",
+    "description": "Return, dipakai di dalam fungsi."
   },
-  "Lambda Function": {
+  "Lambda": {
     "prefix": "lamda",
-    "body": "lamda (${1:params}) => ${2:expr}",
-    "description": "Lambda function"
+    "body": "${1:kali_dua} gas lamda (${2:x}) => ${2:x} kali ${3:2};",
+    "description": "Fungsi anonim."
   },
-  "Try-Catch": {
+  "Coba tangkep": {
     "prefix": "coba",
     "body": [
       "coba {",
-      "\t${1:// code}",
+      "\tbacot ${1:1 bagi 0};",
       "} tangkep {",
-      "\t${2:// catch code}",
+      "\tbacot ${2:\"Ada yang kagadanta, bre.\"};",
       "}"
     ],
-    "description": "Try-catch block"
+    "description": "Tangkap error saat eksekusi."
   },
-  "Continue Statement": {
+  "Terus": {
     "prefix": "terus",
     "body": "terus;",
-    "description": "Continue statement"
+    "description": "Lanjut iterasi, dipakai di dalam loop."
   },
-  "Break Statement": {
+  "Berhenti": {
     "prefix": "berhenti",
     "body": "berhenti;",
-    "description": "Break statement"
+    "description": "Berhenti, dipakai di dalam loop."
   },
-  "Import Module": {
+  "Impor": {
     "prefix": "impor",
-    "body": "impor ${1:module};",
-    "description": "Import module"
+    "body": "impor ${1:math};",
+    "description": "Impor modul Python yang didukung."
   },
-  "Import From Module": {
+  "Dari": {
     "prefix": "dari",
-    "body": "dari ${1:module} impor ${2:name};",
-    "description": "Import from module"
+    "body": "dari ${1:math} impor ${2:sqrt};",
+    "description": "Impor nama dari modul."
   },
-  "Import As": {
+  "Impor sebagai": {
     "prefix": "imporsbg",
-    "body": "impor ${1:module} sebagai ${2:alias};",
-    "description": "Import module with alias"
+    "body": "impor ${1:math} sebagai ${2:mtk};",
+    "description": "Impor dengan alias."
   },
-  "List Declaration": {
-    "prefix": "gudang",
-    "body": "gudang ${1:name} GAS [${2:items}];",
-    "description": "List declaration (gudang)"
-  },
-  "Dictionary Declaration": {
-    "prefix": "catetan",
-    "body": "catetan ${1:name} GAS {${2:pairs}};",
-    "description": "Dictionary declaration (catetan)"
-  },
-  "For Range Loop": {
-    "prefix": "dalam",
-    "body": [
-      "puterin ${1:item} dalam ${2:iterable} {",
-      "\t${3:// code}",
-      "}"
+  "List": {
+    "prefix": [
+      "list",
+      "gudang"
     ],
-    "description": "For-in loop (dalam)"
+    "body": "${1:angka} gas [${2:1, 2, 3}];",
+    "description": "List tanpa kata kunci tipe."
+  },
+  "Dictionary": {
+    "prefix": [
+      "dict",
+      "catetan"
+    ],
+    "body": "${1:data} gas {${2:\"asal\": \"Bekasi\"}};",
+    "description": "Dictionary tanpa kata kunci tipe."
+  },
+  "Tambah": {
+    "prefix": "tambah",
+    "body": "${1:hasil} gas ${2:10} tambah ${3:5};",
+    "description": "Penjumlahan angka, string, atau list."
   }
 }

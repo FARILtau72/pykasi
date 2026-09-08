@@ -1,0 +1,31 @@
+# PyKasi 0.2 — ngomongnya Bekasi, jalannya pakai logika.
+omongan asal gas "Bekasi";
+bacot "Woy, " tambah asal tambah "!";
+
+danta paham gas danta;
+kalo paham {
+    bacot "Danta, bre. Gas lanjut!";
+} kaga {
+    bacot "Kagadanta? Tanya dulu, bre.";
+}
+
+duit patungan gas 10000 tambah 5000;
+bacot patungan;
+
+fungsi tambah(a, b) {
+    balikin a tambah b;
+}
+bacot tambah(2, 3);
+
+duit putaran gas 1;
+puterin putaran <= 3 {
+    bacot putaran;
+    putaran gas putaran tambah 1;
+}
+
+paham gas Kagadanta;
+kalo paham {
+    bacot "Udah paham.";
+} kaga {
+    bacot "Santai, belajar lagi.";
+}

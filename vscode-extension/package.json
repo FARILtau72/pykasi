@@ -1,8 +1,8 @@
 {
   "name": "pykasi-language",
   "displayName": "PyKasi Language Support",
-  "description": "Bahasa pemrograman lokal dengan syntax yang mudah dipahami orang Indonesia",
-  "version": "1.0.0",
+  "description": "Sintaks PyKasi: bacot, danta, kagadanta, dan operator kata rasa Bekasi.",
+  "version": "1.1.0",
   "publisher": "pykasi-dev",
   "engines": {
     "vscode": "^1.75.0"
@@ -12,13 +12,18 @@
     "Snippets",
     "Themes"
   ],
-  "icon": "assets/logo.png",
   "contributes": {
     "languages": [
       {
         "id": "pykasi",
-        "aliases": ["PyKasi", "pykasi", "Bekasi"],
-        "extensions": [".bks"],
+        "aliases": [
+          "PyKasi",
+          "pykasi",
+          "Bekasi"
+        ],
+        "extensions": [
+          ".bks"
+        ],
         "configuration": "./language-configuration.json",
         "icon": {
           "light": "assets/logo.svg",
@@ -49,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/pykasi/pykasi"
+    "url": "https://github.com/FARILtau72/pykasi"
   },
   "keywords": [
     "pykasi",

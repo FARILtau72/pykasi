@@ -27,12 +27,13 @@ Ekstensi VS Code untuk bahasa pemrograman **PyKasi** - bahasa pemrograman dengan
 - `gas` - assignment
 - `duit` - numeric type
 - `omongan` - string type
-- `valid` / `hoax` - boolean type
-- `gudang` - list
-- `catetan` - dictionary
+- `danta` / `kagadanta` - True / False; `valid` / `hoax` tetap didukung
+- List: `angka gas [1, 2, 3];`
+- Dictionary: `data gas {"asal": "Bekasi"};`
 
 ### I/O & Import
-- `spill` - print
+- `bacot` / `spill` - print
+- `tambah`, `kurang`, `kali`, `bagi`, `sisa`, `pangkat` - operator aritmatika
 - `impor` / `dari` / `sebagai` - import statements
 
 ### Error Handling
@@ -67,7 +68,7 @@ Ekstensi VS Code untuk bahasa pemrograman **PyKasi** - bahasa pemrograman dengan
    - Buka VS Code
    - Extensions panel (Ctrl+Shift+X)
    - Klik menu (...) → "Install from VSIX..."
-   - Pilih file `pykasi-language-1.0.0.vsix`
+   - Pilih file `pykasi-language-1.1.0.vsix`
 
 ## Cara Pakai
 
@@ -79,24 +80,24 @@ Ekstensi VS Code untuk bahasa pemrograman **PyKasi** - bahasa pemrograman dengan
 
 ```pykasi
 # Ini adalah komentar
-spill "Halo dari PyKasi!";
+bacot "Woy, Bekasi!";
 
-duit angka GAS 10;
-omongan nama GAS "Bekasi";
+duit angka gas 10;
+omongan nama gas "Bekasi";
 
 kalo angka > 5 {
     spill "Angka lebih besar dari 5";
-} kalo_kaga {
+} kaga {
     spill "Angka kecil atau sama dengan 5";
 }
 
 puterin angka > 0 {
     spill angka;
-    angka GAS angka - 1;
+    angka gas angka - 1;
 }
 
 fungsi tambah(a, b) {
-    balikin a + b;
+    balikin a tambah b;
 }
 
 spill tambah(5, 3);
@@ -108,7 +109,7 @@ Ketik prefix berikut lalu tekan Tab:
 
 | Prefix | Deskripsi |
 |--------|-----------|
-| `spill` | Print statement |
+| `bacot` / `spill` | Print statement |
 | `gas` | Variable assignment |
 | `kalo` | If statement |
 | `kaloelse` | If-else statement |
@@ -117,7 +118,9 @@ Ketik prefix berikut lalu tekan Tab:
 | `coba` | Try-catch block |
 | `duit` | Numeric variable |
 | `omongan` | String variable |
-| `valid` | Boolean variable |
+| `danta` / `valid` | Boolean variable |
+| `kagadanta` | Nilai False |
+| `tambah` | Penjumlahan |
 
 ## License
 
@@ -125,4 +128,15 @@ MIT License
 
 ## Repository
 
-[https://github.com/pykasi/pykasi](https://github.com/pykasi/pykasi)
+[https://github.com/FARILtau72/pykasi](https://github.com/FARILtau72/pykasi)
+
+## Sintaks 0.2
+
+Lihat [kamus PyKasi](../SINTAKS.md). `danta` dan `kagadanta` menerima kapitalisasi
+seperti `Danta` atau `Kagadanta`; kata kunci lain memakai huruf kecil.
+Snippet menghasilkan `gas` huruf kecil dan komentar `#`. List/dictionary
+menggunakan assignment biasa; sintaks for-in dan komentar blok belum didukung
+interpreter sehingga tidak ditawarkan sebagai snippet.
+
+Operator kata juga tetap bisa menjadi nama fungsi/variabel, misalnya
+`fungsi tambah(a, b) { balikin a tambah b; }`.

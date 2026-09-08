@@ -4,204 +4,178 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#10120f">
-    <title>PyKasi — Ngoding rasa Bekasi</title>
-    <meta name="description" content="Kenalan sama PyKasi, bahasa pemrograman esoterik berbasis Python dengan bahasa tongkrongan Bekasi. Pelajari sintaks, lihat contoh, dan mulai ngoding.">
+    <title>PyKasi 0.2 — Ngoding pake bahasa sendiri</title>
+    <meta name="description" content="Ngoding rasa Bekasi dengan PyKasi 0.2. Pakai bacot, danta, kagadanta, dan tambah. Pelajari sintaks, lihat contoh, lalu jalankan program .bks pertama lu.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="id_ID">
-    <meta property="og:title" content="PyKasi — Ngoding rasa Bekasi">
-    <meta property="og:description" content="Logika pemrograman, bahasa tongkrongan. Kenalan dengan sintaks PyKasi dan jalankan program .bks pertama lu.">
+    <meta property="og:title" content="PyKasi — Ngoding pake bahasa sendiri">
+    <meta property="og:description" content="Danta, kagadanta, tambah. Bahasa tongkrongan Bekasi jadi sintaks beneran.">
     <link rel="icon" href="./assets/logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./assets/style.css">
     <script src="./assets/main.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#konten">Langsung ke konten</a>
-
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#" aria-label="PyKasi, beranda">
-          <img src="./assets/logo.svg" alt="" width="36" height="36">
-          <span>PyKasi<span class="brand-period">.</span></span>
-        </a>
-        <nav class="navigation" aria-label="Navigasi utama">
-          <a href="#sintaks">Sintaks</a>
-          <a href="#mulai">Mulai ngoding</a>
-          <a class="nav-docs" href="https://github.com/FARILtau72/pykasi/blob/main/README.md">Dokumentasi</a>
-        </nav>
-        <a class="github-link" href="https://github.com/FARILtau72/pykasi">
-          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.71 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.01-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.78 10.78 0 0 1 5.63 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.78 1.16 1.78 1.16 3.01 0 4.32-2.64 5.27-5.15 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg>
-          <span>GitHub</span>
-          <span aria-hidden="true">↗</span>
-        </a>
+        <a class="brand" href="#" aria-label="PyKasi, beranda"><img src="./assets/logo.svg" alt="" width="34" height="34"><span>PyKasi<span class="brand-period">.</span></span><span class="version">0.2</span></a>
+        <nav class="navigation" aria-label="Navigasi utama"><a href="#contoh">Contoh kode</a><a href="#sintaks">Kamus sintaks</a><a href="#mulai">Mulai ngoding</a></nav>
+        <a class="github-link" href="https://github.com/FARILtau72/pykasi"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.71 2.63 1.22 3.27.93.1-.73.39-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.01-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.78 10.78 0 0 1 5.63 0c2.14-1.45 3.09-1.15 3.09-1.15.61 1.55.23 2.7.11 2.98.72.78 1.16 1.78 1.16 3.01 0 4.32-2.64 5.27-5.15 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub</span><span aria-hidden="true">↗</span></a>
       </div>
     </header>
 
     <main id="konten">
       <section class="hero container" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="label-mark" aria-hidden="true">[bks]</span> PYTHON KETEMU BEKASI</p>
-          <h1 id="hero-title">Logikanya sama.<br>Bahasanya<br><span>beda, bre.</span></h1>
-          <p class="hero-description">Kenalin, PyKasi. Bahasa pemrograman esoterik berbasis Python yang ngomong pakai bahasa tongkrongan Bekasi.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#mulai">Gas, mulai ngoding <span aria-hidden="true">↗</span></a>
-            <a class="text-link" href="#sintaks">Intip sintaksnya <span aria-hidden="true">↓</span></a>
-          </div>
-          <ul class="hero-meta" aria-label="Tentang proyek">
-            <li>Open source</li>
-            <li>Python 3.8+</li>
-            <li>Lisensi MIT</li>
-          </ul>
+        <div class="hero-topline"><p class="eyebrow">BAHASA PEMROGRAMAN RASA BEKASI</p><a class="release-note" href="#sintaks"><span>BARU DI 0.2</span> Danta. Kagadanta. Tambah. <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-heading">
+          <h1 id="hero-title">Ngoding pake<br><span>bahasa sendiri.</span></h1>
+          <div class="hero-copy"><p>Biasanya dipakai pas nongkrong.<br>Sekarang, jadi kodingan.</p><p class="hero-description">PyKasi bikin logika pemrograman ngomong dengan kosakata Bekasi. Ditulis dalam Python, dibaca dengan gaya lu.</p><div class="hero-actions"><a class="button button-primary" href="#mulai">Gas, mulai ngoding <span aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/FARILtau72/pykasi/blob/main/SINTAKS.md">Baca dokumentasi</a></div></div>
         </div>
 
-        <div class="hero-example">
-          <div class="editor" aria-label="Contoh kode PyKasi dan hasilnya">
-            <div class="editor-bar">
-              <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="editor-label">kenalan.bks</span>
-              <span class="file-type">PyKasi</span>
-            </div>
-            <div class="example-toolbar">
-              <span class="example-caption">Contoh kode</span>
-              <div class="example-controls">
-                <label class="sr-only" for="example-select">Pilih contoh kode</label>
-                <select id="example-select" hidden>
-                  <option value="kenalan">Kenalan</option>
-                  <option value="kondisi">Percabangan</option>
-                  <option value="perulangan">Perulangan</option>
-                  <option value="fungsi">Fungsi</option>
-                </select>
-                <button class="copy-button" type="button" data-copy-example hidden>Salin kode</button>
-              </div>
-            </div>
-            <div id="example-panel" aria-live="polite" aria-atomic="true">
-              <div data-example="kenalan" data-filename="kenalan.bks">
-                <pre class="source-code"><code data-source><span class="token-comment"># Dari Bekasi, buat yang penasaran.</span>
+        <div class="workbench" id="contoh">
+          <div class="workbench-heading"><div><span class="terminal-mark" aria-hidden="true">&gt;_</span><span>SEDIKIT KODE. LANGSUNG KEBAYANG.</span></div><span class="workbench-language">PYKASI / .bks</span></div>
+          <div class="example-tabs" role="tablist" aria-label="Pilih contoh PyKasi" hidden><button id="tab-kenalan" type="button" role="tab" aria-controls="example-kenalan" aria-selected="false" tabindex="-1" data-example-tab="kenalan"><span class="tab-number">01</span>Kenalan dulu</button>
+<button id="tab-kondisi" type="button" role="tab" aria-controls="example-kondisi" aria-selected="false" tabindex="-1" data-example-tab="kondisi"><span class="tab-number">02</span>Danta / kagadanta</button>
+<button id="tab-perulangan" type="button" role="tab" aria-controls="example-perulangan" aria-selected="false" tabindex="-1" data-example-tab="perulangan"><span class="tab-number">03</span>Puterin lagi</button>
+<button id="tab-fungsi" type="button" role="tab" aria-controls="example-fungsi" aria-selected="false" tabindex="-1" data-example-tab="fungsi"><span class="tab-number">04</span>Racik fungsi</button></div>
+          <div class="example-panels"><article id="example-kenalan" class="example" data-example="kenalan" data-filename="kenalan.bks" role="tabpanel" aria-labelledby="tab-kenalan" tabindex="0">
+              <h3 class="example-title">Kenalan dulu</h3>
+              <div class="example-grid">
+                <div class="code-area">
+                  <div class="code-heading"><span class="file-label"><span aria-hidden="true">{ }</span> kenalan.bks</span><button class="copy-button" type="button" data-copy="source-kenalan" hidden>Salin kode <span aria-hidden="true">⧉</span></button></div>
+                  <pre class="source-code" tabindex="0" aria-label="Kode kenalan.bks"><code id="source-kenalan" data-source><span class="token-comment"># Dari tongkrongan, jadi kodingan.</span>
+<span class="token-keyword">omongan</span> asal <span class="token-keyword">gas</span> <span class="token-string">&quot;Bekasi&quot;</span>;
+<span class="token-keyword">bacot</span> <span class="token-string">&quot;Woy, &quot;</span> <span class="token-keyword">tambah</span> asal <span class="token-keyword">tambah</span> <span class="token-string">&quot;!&quot;</span>;
 
-<span class="token-keyword">omongan</span> nama <span class="token-keyword">gas</span> <span class="token-string">"Bekasi"</span>;
-<span class="token-keyword">spill</span> <span class="token-string">"Halo, "</span> + nama + <span class="token-string">"!"</span>;
-
-<span class="token-keyword">duit</span> semangat <span class="token-keyword">gas</span> <span class="token-number">100</span>;
-<span class="token-keyword">kalo</span> semangat &gt; <span class="token-number">0</span> {
-    <span class="token-keyword">spill</span> <span class="token-string">"Gas, bikin sesuatu."</span>;
+<span class="token-keyword">danta</span> paham <span class="token-keyword">gas</span> <span class="token-keyword">danta</span>;
+<span class="token-keyword">kalo</span> paham {
+    <span class="token-keyword">bacot</span> <span class="token-string">&quot;Danta, bre. Gas lanjut!&quot;</span>;
+} <span class="token-keyword">kaga</span> {
+    <span class="token-keyword">bacot</span> <span class="token-string">&quot;Kagadanta? Tanya dulu.&quot;</span>;
 }</code></pre>
-                <div class="example-output"><span class="output-label">OUTPUT CONTOH</span><pre data-output>Halo, Bekasi!
-Gas, bikin sesuatu.</pre></div>
+                </div>
+                <div class="example-output">
+                  <div class="output-heading"><span class="output-label">OUTPUT CONTOH</span><span aria-hidden="true">↳</span></div>
+                  <pre data-output tabindex="0" aria-label="Output kenalan.bks">Woy, Bekasi!
+Danta, bre. Gas lanjut!</pre>
+                  <p class="output-explanation">Teks digabung pakai tambah, lalu bacot menampilkannya.</p>
+                </div>
               </div>
-              <div data-example="kondisi" data-filename="kondisi.bks" hidden>
-                <pre class="source-code"><code data-source><span class="token-comment"># Cek hasil belajar hari ini.</span>
+            </article>
+<article id="example-kondisi" class="example" data-example="kondisi" data-filename="kondisi.bks" role="tabpanel" aria-labelledby="tab-kondisi" tabindex="0">
+              <h3 class="example-title">Danta / kagadanta</h3>
+              <div class="example-grid">
+                <div class="code-area">
+                  <div class="code-heading"><span class="file-label"><span aria-hidden="true">{ }</span> kondisi.bks</span><button class="copy-button" type="button" data-copy="source-kondisi" hidden>Salin kode <span aria-hidden="true">⧉</span></button></div>
+                  <pre class="source-code" tabindex="0" aria-label="Kode kondisi.bks"><code id="source-kondisi" data-source><span class="token-comment"># Belum paham? Santai, bre.</span>
+<span class="token-keyword">danta</span> paham <span class="token-keyword">gas</span> <span class="token-keyword">Kagadanta</span>;
 
-<span class="token-keyword">duit</span> nilai <span class="token-keyword">gas</span> <span class="token-number">85</span>;
-
-<span class="token-keyword">kalo</span> nilai &gt;= <span class="token-number">75</span> {
-    <span class="token-keyword">spill</span> <span class="token-string">"Lulus, bre!"</span>;
-} <span class="token-keyword">kalo_kaga</span> {
-    <span class="token-keyword">spill</span> <span class="token-string">"Belajar lagi, gas."</span>;
-}</code></pre>
-                <div class="example-output"><span class="output-label">OUTPUT CONTOH</span><pre data-output>Lulus, bre!</pre></div>
-              </div>
-              <div data-example="perulangan" data-filename="perulangan.bks" hidden>
-                <pre class="source-code"><code data-source><span class="token-comment"># Satu langkah, terus jalan.</span>
-
-<span class="token-keyword">duit</span> langkah <span class="token-keyword">gas</span> <span class="token-number">1</span>;
-
-<span class="token-keyword">puterin</span> langkah &lt;= <span class="token-number">3</span> {
-    <span class="token-keyword">spill</span> langkah;
-    langkah <span class="token-keyword">gas</span> langkah + <span class="token-number">1</span>;
-}
-<span class="token-keyword">spill</span> <span class="token-string">"Kelar, bre."</span>;</code></pre>
-                <div class="example-output"><span class="output-label">OUTPUT CONTOH</span><pre data-output>1
-2
-3
-Kelar, bre.</pre></div>
-              </div>
-              <div data-example="fungsi" data-filename="fungsi.bks" hidden>
-                <pre class="source-code"><code data-source><span class="token-comment"># Bikin sekali, panggil lagi.</span>
-
-<span class="token-keyword">fungsi</span> sapa(nama) {
-    <span class="token-keyword">balikin</span> <span class="token-string">"Apa kabar, "</span> + nama + <span class="token-string">"?"</span>;
+<span class="token-keyword">kalo</span> paham {
+    <span class="token-keyword">bacot</span> <span class="token-string">&quot;Gas lanjut!&quot;</span>;
+} <span class="token-keyword">kaga</span> {
+    <span class="token-keyword">bacot</span> <span class="token-string">&quot;Tanya dulu, bre.&quot;</span>;
 }
 
-<span class="token-keyword">spill</span> sapa(<span class="token-string">"Bekasi"</span>);
-<span class="token-keyword">spill</span> sapa(<span class="token-string">"dunia"</span>);</code></pre>
-                <div class="example-output"><span class="output-label">OUTPUT CONTOH</span><pre data-output>Apa kabar, Bekasi?
-Apa kabar, dunia?</pre></div>
+<span class="token-keyword">bacot</span> <span class="token-string">&quot;Belajar pelan-pelan juga jalan.&quot;</span>;</code></pre>
+                </div>
+                <div class="example-output">
+                  <div class="output-heading"><span class="output-label">OUTPUT CONTOH</span><span aria-hidden="true">↳</span></div>
+                  <pre data-output tabindex="0" aria-label="Output kondisi.bks">Tanya dulu, bre.
+Belajar pelan-pelan juga jalan.</pre>
+                  <p class="output-explanation">Kagadanta bernilai False, jadi cabang kaga yang dijalankan.</p>
+                </div>
               </div>
-            </div>
-            <div class="editor-footer"><span>Bahasa lokal. Logika universal.</span><span class="terminal-prompt" aria-hidden="true">&gt;_</span></div>
-          </div>
-          <p class="example-note"><span aria-hidden="true">↳</span> Iya, <code>spill</code> itu beneran sintaksnya.</p>
+            </article>
+<article id="example-perulangan" class="example" data-example="perulangan" data-filename="perulangan.bks" role="tabpanel" aria-labelledby="tab-perulangan" tabindex="0">
+              <h3 class="example-title">Puterin lagi</h3>
+              <div class="example-grid">
+                <div class="code-area">
+                  <div class="code-heading"><span class="file-label"><span aria-hidden="true">{ }</span> perulangan.bks</span><button class="copy-button" type="button" data-copy="source-perulangan" hidden>Salin kode <span aria-hidden="true">⧉</span></button></div>
+                  <pre class="source-code" tabindex="0" aria-label="Kode perulangan.bks"><code id="source-perulangan" data-source><span class="token-comment"># Sedikit-sedikit, jadi banyak.</span>
+<span class="token-keyword">duit</span> putaran <span class="token-keyword">gas</span> <span class="token-number">1</span>;
+<span class="token-keyword">duit</span> total <span class="token-keyword">gas</span> <span class="token-number">0</span>;
+
+<span class="token-keyword">puterin</span> putaran &lt;= <span class="token-number">3</span> {
+    total <span class="token-keyword">gas</span> total <span class="token-keyword">tambah</span> <span class="token-number">5000</span>;
+    putaran <span class="token-keyword">gas</span> putaran <span class="token-keyword">tambah</span> <span class="token-number">1</span>;
+}
+
+<span class="token-keyword">bacot</span> <span class="token-string">&quot;Total patungan:&quot;</span>;
+<span class="token-keyword">bacot</span> total;</code></pre>
+                </div>
+                <div class="example-output">
+                  <div class="output-heading"><span class="output-label">OUTPUT CONTOH</span><span aria-hidden="true">↳</span></div>
+                  <pre data-output tabindex="0" aria-label="Output perulangan.bks">Total patungan:
+15000</pre>
+                  <p class="output-explanation">Tiga putaran, masing-masing menambah 5000 ke total.</p>
+                </div>
+              </div>
+            </article>
+<article id="example-fungsi" class="example" data-example="fungsi" data-filename="fungsi.bks" role="tabpanel" aria-labelledby="tab-fungsi" tabindex="0">
+              <h3 class="example-title">Racik fungsi</h3>
+              <div class="example-grid">
+                <div class="code-area">
+                  <div class="code-heading"><span class="file-label"><span aria-hidden="true">{ }</span> fungsi.bks</span><button class="copy-button" type="button" data-copy="source-fungsi" hidden>Salin kode <span aria-hidden="true">⧉</span></button></div>
+                  <pre class="source-code" tabindex="0" aria-label="Kode fungsi.bks"><code id="source-fungsi" data-source><span class="token-comment"># Tulis sekali, panggil berkali-kali.</span>
+<span class="token-keyword">fungsi</span> <span class="token-keyword">tambah</span>(a, b) {
+    <span class="token-keyword">balikin</span> a <span class="token-keyword">tambah</span> b;
+}
+
+<span class="token-keyword">duit</span> hasil <span class="token-keyword">gas</span> <span class="token-keyword">tambah</span>(<span class="token-number">10</span>, <span class="token-number">5</span>);
+<span class="token-keyword">bacot</span> hasil;
+
+<span class="token-keyword">bacot</span> <span class="token-number">2</span> <span class="token-keyword">tambah</span> <span class="token-number">3</span> <span class="token-keyword">kali</span> <span class="token-number">4</span>;
+<span class="token-keyword">bacot</span> (<span class="token-number">2</span> <span class="token-keyword">tambah</span> <span class="token-number">3</span>) <span class="token-keyword">kali</span> <span class="token-number">4</span>;</code></pre>
+                </div>
+                <div class="example-output">
+                  <div class="output-heading"><span class="output-label">OUTPUT CONTOH</span><span aria-hidden="true">↳</span></div>
+                  <pre data-output tabindex="0" aria-label="Output fungsi.bks">15
+14
+20</pre>
+                  <p class="output-explanation">Kali dikerjakan lebih dulu. Pakai kurung untuk mengubah urutannya.</p>
+                </div>
+              </div>
+            </article></div>
+          <div class="workbench-footer"><span>Contoh beserta hasilnya. Jalankan kode di terminal lu.</span><a href="#mulai">Cara jalaninnya <span aria-hidden="true">↓</span></a></div>
         </div>
+        <div class="hero-footnote"><p><span class="accent">Python di dalam.</span> Bekasi di setiap baris.</p><ul><li>Open source</li><li>Python 3.8+</li><li>Lisensi MIT</li></ul></div>
       </section>
 
-      <div class="language-strip" aria-hidden="true">
-        <div class="container strip-inner"><span>spill<span class="strip-definition">print</span></span><span>gas<span class="strip-definition">assign</span></span><span>kalo<span class="strip-definition">if</span></span><span>puterin<span class="strip-definition">while</span></span><span>balikin<span class="strip-definition">return</span></span></div>
-      </div>
-
-      <section class="section container" id="sintaks" aria-labelledby="syntax-title">
-        <div class="section-heading">
-          <div><p class="eyebrow">01 / KENALAN DULU</p><h2 id="syntax-title">Bacanya santai.<br>Jalannya pakai logika.</h2></div>
-          <p>Variabel, kondisi, perulangan, sampai fungsi. Konsep yang familiar, dengan kosakata yang lebih dekat.</p>
+      <section class="syntax-section section container" id="sintaks" aria-labelledby="syntax-title">
+        <div class="section-heading"><div><p class="eyebrow">01 / KAMUS TONGKRONGAN</p><h2 id="syntax-title">Danta dulu.<br>Baru gas.</h2></div><p>Kata-katanya udah kenal.<br>Sekarang kenalan sama fungsinya.</p></div>
+        <div class="signature-grid">
+          <article class="signature-card"><div class="signature-heading"><span>BENAR</span><code>True</code></div><h3>danta<span>.</span></h3><p>Jelas. Kondisinya benar. Gas lanjut.</p><code class="signature-code">paham gas <span>danta</span>;</code></article>
+          <article class="signature-card false-card"><div class="signature-heading"><span>SALAH</span><code>False</code></div><h3>kagadanta<span>.</span></h3><p>Belum jelas? Ambil cabang satunya.</p><code class="signature-code">paham gas <span>kagadanta</span>;</code></article>
+          <article class="signature-card"><div class="signature-heading"><span>PENJUMLAHAN</span><code>+</code></div><h3>tambah<span>.</span></h3><p>Gabungin angka, teks, atau list.</p><code class="signature-code">10000 <span>tambah</span> 5000</code></article>
         </div>
-        <div class="syntax-table-wrapper" tabindex="0" role="region" aria-label="Tabel sintaks, bisa digeser ke samping pada layar kecil">
-          <table class="syntax-table">
-            <caption class="sr-only">Perbandingan sintaks Python dan PyKasi</caption>
-            <thead><tr><th scope="col">Kalau di Python</th><th scope="col">Di PyKasi jadi</th><th scope="col">Buat apa?</th></tr></thead>
-            <tbody>
-              <tr><td><code>print("Halo")</code></td><td><code>spill "Halo";</code></td><td>Nampilin sesuatu ke layar.</td></tr>
-              <tr><td><code>nama = "Bekasi"</code></td><td><code>nama gas "Bekasi";</code></td><td>Nyimpen nilai ke variabel.</td></tr>
-              <tr><td><code>if nilai &gt;= 75:</code></td><td><code>kalo nilai &gt;= 75 { ... }</code></td><td>Jalanin kode kalau syaratnya cocok.</td></tr>
-              <tr><td><code>while i &lt; 3:</code></td><td><code>puterin i &lt; 3 { ... }</code></td><td>Ngulang selama kondisi terpenuhi.</td></tr>
-              <tr><td><code>return hasil</code></td><td><code>balikin hasil;</code></td><td>Ngembaliin hasil dari fungsi.</td></tr>
-            </tbody>
-          </table>
+        <div class="syntax-table-wrapper" tabindex="0" role="region" aria-label="Kamus sintaks, bisa digeser ke samping pada layar kecil">
+          <table class="syntax-table"><caption class="sr-only">Padanan sintaks PyKasi dan Python</caption><thead><tr><th scope="col">Lu mau…</th><th scope="col">Tulis di PyKasi</th><th scope="col">Kalau di Python</th></tr></thead><tbody>
+            <tr><td>Nampilin teks</td><td><code>bacot "Woy, Bekasi!";</code></td><td><code>print("Woy, Bekasi!")</code></td></tr>
+            <tr><td>Nyimpen nilai</td><td><code>duit patungan gas 15000;</code></td><td><code>patungan = 15000</code></td></tr>
+            <tr><td>Milih kondisi</td><td><code>kalo ... { ... } kaga { ... }</code></td><td><code>if ...: / else:</code></td></tr>
+            <tr><td>Ngulang langkah</td><td><code>puterin i &lt; 3 { ... }</code></td><td><code>while i &lt; 3:</code></td></tr>
+            <tr><td>Ngembaliin hasil</td><td><code>balikin hasil;</code></td><td><code>return hasil</code></td></tr>
+          </tbody></table>
         </div>
-        <p class="syntax-note">Pakai <code>;</code> di akhir pernyataan sederhana dan <code>{ }</code> untuk blok kode. <a href="https://github.com/FARILtau72/pykasi/blob/main/README.md">Buka kamus sintaks lengkap <span aria-hidden="true">↗</span></a></p>
-
-        <div class="feature-grid">
-          <article class="feature"><span class="feature-symbol" aria-hidden="true">[ ]</span><h3>Datanya bisa macem-macem.</h3><p>Olah list dan dictionary. Ada juga <code>panjang()</code>, <code>jumlah()</code>, dan <code>urutkan()</code> buat bantuin.</p></article>
-          <article class="feature"><span class="feature-symbol" aria-hidden="true">ƒ(x)</span><h3>Sekali bikin, panggil lagi.</h3><p>Tulis fungsi pakai <code>fungsi</code> dan <code>balikin</code>. Mau coba rekursi atau lambda? Bisa juga.</p></article>
-          <article class="feature"><span class="feature-symbol" aria-hidden="true">.py</span><h3>Mesinnya tetap Python.</h3><p>Dibangun dengan PLY. Impor modul Python yang didukung, seperti <code>math</code>, <code>json</code>, dan <code>datetime</code>.</p></article>
-        </div>
+        <div class="operator-row" aria-label="Operator aritmatika"><span><code>tambah</code> +</span><span><code>kurang</code> −</span><span><code>kali</code> ×</span><span><code>bagi</code> /</span><span><code>sisa</code> %</span><span><code>pangkat</code> **</span></div>
+        <p class="syntax-note">Tutup pernyataan sederhana pakai <code>;</code>. Bungkus blok pakai <code>{ }</code>. Komentar pakai <code>#</code>.</p>
+        <details class="compatibility"><summary>Udah punya kode PyKasi versi lama?</summary><div><p><code>spill</code>, <code>valid</code>, <code>hoax</code>, <code>kalo_kaga</code>, dan operator simbol masih jalan. Nama fungsi seperti <code>tambah()</code> juga tetap bisa dipakai.</p><p>Kata baru <code>bacot</code>, <code>kaga</code>, <code>danta</code>, dan <code>kagadanta</code> sekarang jadi kata kunci. Kalau sebelumnya dipakai sebagai nama variabel, ganti namanya. <a href="https://github.com/FARILtau72/pykasi/blob/main/SINTAKS.md">Baca aturan lengkap ↗</a></p></div></details>
+        <div class="feature-grid"><article><span class="feature-symbol" aria-hidden="true">ƒ(x)</span><h3>Fungsi &amp; rekursi</h3><p>Racik fungsi, balikin hasilnya. Lambda juga ada.</p></article><article><span class="feature-symbol" aria-hidden="true">[ ]</span><h3>List &amp; dictionary</h3><p>Olah data pakai <code>panjang()</code>, <code>jumlah()</code>, dan <code>urutkan()</code>.</p></article><article><span class="feature-symbol" aria-hidden="true">.py</span><h3>Tetap dekat Python</h3><p>Impor modul yang didukung, seperti <code>math</code>, <code>json</code>, dan <code>datetime</code>.</p></article></div>
       </section>
 
-      <section class="start-section" id="mulai" aria-labelledby="start-title">
-        <div class="container start-layout">
-          <div class="start-copy">
-            <p class="eyebrow">02 / LANGSUNG GAS</p>
-            <h2 id="start-title">Program pertama lu<br>mulai dari sini.</h2>
-            <p>Siapin <strong>Python 3.8+</strong> dan <strong>Git</strong>, terus buka terminal. Tiga langkah ini buat jalanin contoh bawaan PyKasi.</p>
-            <p class="platform-note">Windows, macOS, atau Linux.<br>Kalau perintah Python lu <code>python3</code>, ganti <code>python</code> di contoh ini.</p>
-            <a class="text-link" href="https://github.com/FARILtau72/pykasi/blob/main/README.md">Baca panduan lengkap <span aria-hidden="true">↗</span></a>
-          </div>
-          <ol class="install-steps">
-            <li>
-              <div class="step-heading"><span class="step-number" aria-hidden="true">01</span><h3>Ambil kodingannya.</h3><button class="copy-button" type="button" data-copy="install-clone" aria-label="Salin perintah clone repository" hidden>Salin</button></div>
-              <pre><code id="install-clone">git clone https://github.com/FARILtau72/pykasi.git
-cd pykasi</code></pre>
-            </li>
-            <li>
-              <div class="step-heading"><span class="step-number" aria-hidden="true">02</span><h3>Pasang jantungnya.</h3><button class="copy-button" type="button" data-copy="install-ply" aria-label="Salin perintah instalasi PLY" hidden>Salin</button></div>
-              <pre><code id="install-ply">python -m pip install ply</code></pre>
-            </li>
-            <li>
-              <div class="step-heading"><span class="step-number" aria-hidden="true">03</span><h3>Jalanin. Spill hasilnya.</h3><button class="copy-button" type="button" data-copy="install-run" aria-label="Salin perintah menjalankan PyKasi" hidden>Salin</button></div>
-              <pre><code id="install-run">python main.py contoh.bks</code></pre>
-            </li>
-          </ol>
-        </div>
-      </section>
+      <section class="start-section" id="mulai" aria-labelledby="start-title"><div class="container start-layout">
+        <div class="start-copy"><p class="eyebrow">02 / GILIRAN LU</p><h2 id="start-title">Dari penasaran,<br>jadi program pertama.</h2><p>Siapin <strong>Python 3.8+</strong> dan <strong>Git</strong>. Buka terminal, lalu ikuti tiga langkah ini.</p><p class="platform-note">Bisa di Windows, macOS, atau Linux. Kalau perintah Python lu <code>python3</code>, ganti <code>python</code> di contoh.</p><a class="text-link" href="https://github.com/FARILtau72/pykasi/blob/main/README.md">Panduan instalasi lengkap <span aria-hidden="true">↗</span></a><div class="start-signoff"><span aria-hidden="true">&gt;_</span><p>Modal penasaran.<br><strong>Selebihnya, gas aja.</strong></p></div></div>
+        <ol class="install-steps">
+          <li><div class="step-heading"><span class="step-number" aria-hidden="true">01</span><h3>Ambil kodingannya.</h3><button class="copy-button" type="button" data-copy="install-clone" aria-label="Salin perintah clone repository" hidden>Salin</button></div><pre tabindex="0" aria-label="Perintah clone"><code id="install-clone">git clone https://github.com/FARILtau72/pykasi.git
+cd pykasi</code></pre></li>
+          <li><div class="step-heading"><span class="step-number" aria-hidden="true">02</span><h3>Pasang jantungnya.</h3><button class="copy-button" type="button" data-copy="install-ply" aria-label="Salin perintah instalasi PLY" hidden>Salin</button></div><pre tabindex="0" aria-label="Perintah instalasi"><code id="install-ply">python -m pip install ply</code></pre></li>
+          <li><div class="step-heading"><span class="step-number" aria-hidden="true">03</span><h3>Jalanin. Bacot hasilnya.</h3><button class="copy-button" type="button" data-copy="install-run" aria-label="Salin perintah menjalankan contoh Bekasi" hidden>Salin</button></div><pre tabindex="0" aria-label="Perintah menjalankan contoh"><code id="install-run">python main.py bekasi.bks</code></pre></li>
+        </ol>
+      </div></section>
 
-      <section class="container community-section" aria-labelledby="community-title">
-        <div><p class="eyebrow">DARI BEKASI, TERBUKA BUAT SIAPA AJA.</p><h2 id="community-title">Punya ide? Gas kontribusi.</h2><p>Tambahin fitur, rapihin dokumentasi, atau laporin bug.<br>PyKasi terbuka buat lu yang mau ikut ngembangin.</p></div>
-        <a class="button button-outline" href="https://github.com/FARILtau72/pykasi/blob/main/README.md#-kontribusi">Kontribusi di GitHub <span aria-hidden="true">↗</span></a>
-      </section>
+      <section class="container community-section" aria-labelledby="community-title"><div><p class="eyebrow">DARI BEKASI. TERBUKA BUAT SIAPA AJA.</p><h2 id="community-title">Punya ide?<br>Jangan dipendem, bre.</h2><p>Tambahin fitur, rapihin dokumentasi, atau laporin bug.<br>Ikut bikin PyKasi makin danta.</p></div><a class="button button-outline" href="https://github.com/FARILtau72/pykasi/blob/main/README.md#-kontribusi">Gas kontribusi di GitHub <span aria-hidden="true">↗</span></a></section>
     </main>
-
-    <footer class="site-footer container">
-      <a class="brand footer-brand" href="#">PyKasi<span class="brand-period">.</span></a>
-      <p>Dibuat oleh <a href="https://github.com/FARILtau72">FARILtau72</a>. Rasa Bekasi, ditenagai Python.</p>
-      <a href="https://github.com/FARILtau72/pykasi/blob/main/LICENSE.MIT">Lisensi MIT <span aria-hidden="true">↗</span></a>
-    </footer>
+    <footer class="site-footer container"><a class="brand footer-brand" href="#">PyKasi<span class="brand-period">.</span></a><p>Diracik oleh <a href="https://github.com/FARILtau72">FARILtau72</a>. Dari Bekasi, pakai Python.</p><div><a href="https://github.com/FARILtau72/pykasi/blob/main/SINTAKS.md">Dokumentasi</a><a href="https://github.com/FARILtau72/pykasi/blob/main/LICENSE.MIT">MIT License ↗</a></div></footer>
     <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
   </body>
 </html>

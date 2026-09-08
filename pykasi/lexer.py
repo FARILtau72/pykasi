@@ -13,10 +13,14 @@ class Lexer:
     literals = []
 
     reserved = {
+        'bacot': 'SPILL',
         'spill': 'SPILL',
         'gas': 'GAS',
         'kalo': 'KALO',
         'kalo_kaga': 'KALO_KAGA',
+        'kaga': 'KALO_KAGA',
+        'danta': 'VALID',
+        'kagadanta': 'HOAX',
         'valid': 'VALID',
         'hoax': 'HOAX',
         'puterin': 'PUTERIN',
@@ -37,7 +41,21 @@ class Lexer:
         'sebagai': 'SEBAGAI'
     }
 
-    tokens = tokens + list(reserved.values())
+    # Dedicated tokens let arithmetic words also remain valid identifiers,
+    # e.g. fungsi tambah(a, b) { balikin a tambah b; }.
+    word_operators = {
+        'tambah': ('TAMBAH', '+'),
+        'kurang': ('KURANG', '-'),
+        'kali': ('KALI', '*'),
+        'bagi': ('BAGI', '/'),
+        'sisa': ('SISA', '%'),
+        'pangkat': ('PANGKAT', '**'),
+    }
+
+    tokens = list(dict.fromkeys(
+        tokens + list(reserved.values()) +
+        [operator[0] for operator in word_operators.values()]
+    ))
 
     t_PLUS = r'\+'
     t_MINUS = r'-'
@@ -71,7 +89,11 @@ class Lexer:
 
     def t_NAME(self, t):
         r'[a-zA-Z_][a-zA-Z0-9_]*'
-        if t.value in self.reserved:
+        if t.value.lower() in ('danta', 'kagadanta'):
+            t.type = self.reserved[t.value.lower()]
+        elif t.value in self.word_operators:
+            t.type = self.word_operators[t.value][0]
+        elif t.value in self.reserved:
             t.type = self.reserved[t.value]
         return t
 

@@ -18,11 +18,13 @@ Lalu buka `http://localhost:8000`. Hanya folder `docs/` yang perlu disajikan.
 
 ## Interaksi
 
-- Pilih salah satu dari empat contoh kode: kenalan, percabangan, perulangan, atau fungsi.
+- Pilih salah satu dari empat tab contoh: kenalan, danta/kagadanta, perulangan, atau fungsi.
+- Navigasi tab memakai klik, panah kiri/kanan, Home, atau End. Kode dan output
+  berdampingan di layar lebar dan bertumpuk di layar kecil.
 - Tombol salin menyalin contoh yang aktif atau perintah instalasi.
 - Jika Clipboard API tidak tersedia atau izin ditolak, teks dipilih dan panduan
   menyalin manual ditampilkan.
-- Tanpa JavaScript, contoh pertama, output, tabel sintaks, panduan instalasi, dan
+- Tanpa JavaScript, keempat contoh, output, tabel sintaks, panduan instalasi, dan
   navigasi tetap tersedia. Kontrol yang membutuhkan JavaScript disembunyikan.
 - Output adalah hasil contoh yang sudah ditentukan, bukan eksekusi interpreter
   di browser. Untuk menjalankan atau mengubah kode, gunakan interpreter Python.
@@ -60,3 +62,7 @@ maupun subpath seperti `/pykasi/`.
 Saat mengganti contoh, jalankan teks di dalam `[data-source]` dengan
 `pykasi.run_text` dan cocokkan stdout dengan `[data-output]` pada panel yang sama.
 Periksa sintaks JavaScript dengan `node --check docs/assets/main.js`.
+
+Homepage memakai sintaks PyKasi 0.2 dari [SINTAKS.md](../SINTAKS.md). Langkah
+instalasi terakhir menjalankan `bekasi.bks`. Uji contoh dan snippet tersedia pada
+`tests/test_bekasi_syntax.py`.

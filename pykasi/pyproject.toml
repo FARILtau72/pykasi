@@ -1,6 +1,6 @@
 [project]
 name = "pykasi"
-version = "0.1.0"
+version = "0.2.0"
 description = "PyKasi — esoteric teaching language with Bekasi slang"
 readme = "README.md"
 requires-python = ">=3.8"
