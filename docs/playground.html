@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#10120f">
+    <title>PyKasi Playground — Tulis. Gas. Liat hasilnya.</title>
+    <meta name="description" content="Playground PyKasi untuk menulis dan menjalankan kode .bks langsung di browser.">
+    <link rel="icon" href="./assets/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/playground.css">
+    <script src="./assets/playground.js" defer></script>
+  </head>
+  <body class="playground-page">
+    <a class="skip-link" href="#editor">Langsung ke editor</a>
+    <header class="site-header"><div class="container header-inner">
+      <a class="brand" href="./index.html" aria-label="PyKasi, beranda"><img src="./assets/logo.svg" alt="" width="34" height="34"><span>PyKasi<span class="brand-period">.</span></span><span class="version">PLAYGROUND</span></a>
+      <nav class="navigation" aria-label="Navigasi utama"><a href="./index.html#contoh">Contoh</a><a href="./index.html#sintaks">Sintaks</a><a href="./index.html#mulai">Instalasi</a></nav>
+      <a class="github-link" href="https://github.com/FARILtau72/pykasi">GitHub <span aria-hidden="true">↗</span></a>
+    </div></header>
+    <main class="playground-shell container">
+      <section class="playground-intro" aria-labelledby="playground-title"><div><p class="eyebrow">PYKASI / LANGSUNG DI BROWSER</p><h1 id="playground-title">Tulis. Gas.<br><span>Liat hasilnya.</span></h1></div><p>Latihan sintaks PyKasi tanpa instal apa-apa. Semua kode dijalankan di browser lu.</p></section>
+      <section class="playground" aria-label="Editor dan output PyKasi">
+        <div class="playground-toolbar"><div class="file-name"><span class="status-dot" id="run-dot" aria-hidden="true"></span><span class="terminal-mark" aria-hidden="true">{ }</span><span>main.bks</span></div><div class="toolbar-actions"><button class="toolbar-button" type="button" id="share-button">Bagikan ↗</button><button class="toolbar-button" type="button" id="reset-button">Reset</button><button class="run-button" type="button" id="run-button"><span aria-hidden="true">▶</span> Jalankan <kbd>Ctrl ↵</kbd></button></div></div>
+        <div class="workspace">
+          <section class="editor-pane" aria-label="Editor kode"><div class="pane-heading"><span>KODE PYKASI</span><span id="cursor-status">Baris 1, kolom 1</span></div><div class="editor-wrap" id="editor-wrap"><pre id="highlighting" aria-hidden="true"><code id="highlighting-code"></code></pre><textarea id="editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Editor kode PyKasi"></textarea></div><div class="editor-footer"><span>.bks</span><span>Tab buat indentasi</span><span>Ctrl + Enter buat jalanin</span></div></section>
+          <section class="output-pane" aria-label="Output program"><div class="pane-heading"><span>OUTPUT</span><button type="button" id="clear-output">Bersihin output</button></div><pre id="output" aria-live="polite" tabindex="0"><code><span class="output-muted">Klik Jalankan buat ngelihat hasilnya, bre.</span></code></pre><div class="output-footer"><span id="run-status">Siap jalanin kode.</span><span id="run-time"></span></div></section>
+        </div>
+      </section>
+      <section class="playground-bottom"><div class="snippets-panel" aria-labelledby="snippet-title"><div class="panel-title"><p class="eyebrow" id="snippet-title">COBA CEPAT</p><p>Pilih contoh, langsung masuk editor.</p></div><div class="snippet-grid"><button type="button" data-template="hello"><code>bacot</code><span>Kenalan dulu</span></button><button type="button" data-template="condition"><code>danta</code><span>Kondisi</span></button><button type="button" data-template="loop"><code>puterin</code><span>Perulangan</span></button><button type="button" data-template="function"><code>fungsi</code><span>Fungsi</span></button></div></div><aside class="help-panel" aria-labelledby="help-title"><p class="eyebrow" id="help-title">KAMUS KILAT</p><dl><div><dt><code>bacot</code></dt><dd>Tampilkan nilai</dd></div><div><dt><code>danta</code></dt><dd>Benar / True</dd></div><div><dt><code>kagadanta</code></dt><dd>Salah / False</dd></div><div><dt><code>tambah</code></dt><dd>Penjumlahan</dd></div></dl><a href="./index.html#sintaks">Buka kamus lengkap ↗</a></aside></section>
+      <section class="support-note"><span class="terminal-mark" aria-hidden="true">&gt;_</span><p>Playground mendukung sintaks inti: variabel, <code>bacot</code>, <code>kalo/kaga</code>, <code>puterin</code>, fungsi, list, dictionary, dan operator Bekasi. Untuk import modul atau Flask, jalanin interpreter Python lokal.</p></section>
+    </main>
+    <p id="toast" class="copy-status" role="status" aria-live="polite"></p>
+  </body>
+</html>
