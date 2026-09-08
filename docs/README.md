@@ -60,6 +60,9 @@ dictionary, serta operator Bekasi seperti `tambah`, `kali`, dan `bagi`.
 Import dan Flask tetap perlu interpreter Python lokal. Playground sengaja berjalan
 sepenuhnya di perangkat pengunjung.
 
+Panduan penggunaan, sintaks yang didukung, dan batasan browser ada di
+[PLAYGROUND.md](PLAYGROUND.md).
+
 ## Struktur
 
 - `index.html`: konten, contoh kode, output, dan metadata halaman.
