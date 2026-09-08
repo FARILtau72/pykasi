@@ -2,15 +2,31 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "PyKasi",
   "scopeName": "source.pykasi",
-  "fileTypes": ["bks"],
+  "fileTypes": [
+    "bks"
+  ],
   "patterns": [
-    { "include": "#comments" },
-    { "include": "#strings" },
-    { "include": "#numbers" },
-    { "include": "#keywords" },
-    { "include": "#operators" },
-    { "include": "#functions" },
-    { "include": "#variables" }
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#variables"
+    }
   ],
   "repository": {
     "comments": {
@@ -52,7 +68,11 @@
       "patterns": [
         {
           "name": "keyword.control.conditional.pykasi",
-          "match": "\\b(kalo|kalo_kaga|valid|hoax)\\b"
+          "match": "\\b(kalo|kaga|kalo_kaga)\\b"
+        },
+        {
+          "name": "constant.language.boolean.pykasi",
+          "match": "\\b((?i:danta|kagadanta)|valid|hoax)\\b"
         },
         {
           "name": "keyword.control.loop.pykasi",
@@ -72,7 +92,7 @@
         },
         {
           "name": "keyword.declaration.variable.pykasi",
-          "match": "\\b(duit|omongan|gudang|catetan)\\b"
+          "match": "\\b(duit|omongan)\\b"
         },
         {
           "name": "keyword.other.import.pykasi",
@@ -80,7 +100,7 @@
         },
         {
           "name": "keyword.other.statement.pykasi",
-          "match": "\\b(spill|gas|dalam)\\b"
+          "match": "\\b(bacot|spill|gas)\\b"
         }
       ]
     },
@@ -88,7 +108,11 @@
       "patterns": [
         {
           "name": "keyword.operator.arithmetic.pykasi",
-          "match": "(\\+|\\-|\\*|\\/|\\%|\\*\\*)"
+          "match": "\\b(tambah|kurang|kali|bagi|sisa|pangkat)\\b"
+        },
+        {
+          "name": "keyword.operator.arithmetic.pykasi",
+          "match": "(\\*\\*|[+*/%\\-])"
         },
         {
           "name": "keyword.operator.comparison.pykasi",
@@ -96,7 +120,7 @@
         },
         {
           "name": "keyword.operator.assignment.pykasi",
-          "match": "(GAS|=>)"
+          "match": "(\\bgas\\b|=>)"
         },
         {
           "name": "punctuation.separator.pykasi",

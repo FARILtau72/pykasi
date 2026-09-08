@@ -3,7 +3,7 @@
 Expose package-level helpers for running PyKasi code programmatically.
 """
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 from .lexer import Lexer
 from .parser import Parser

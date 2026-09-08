@@ -135,18 +135,28 @@ class Parser:
         self.lexer = Lexer()
         self.lexer.build()
         self.tokens = self.lexer.tokens
-        self.yacc = yacc.yacc(module=self, debug=False, write_tables=False)
+        self.yacc = yacc.yacc(module=self, start='program', debug=False, write_tables=False)
 
     def parse(self, text):
         return self.yacc.parse(text, lexer=self.lexer.lexobj)
 
     precedence = (
         ('left', 'EQEQ', 'NEQ', 'GT', 'LT', 'GTE', 'LTE'),
-        ('left', 'PLUS', 'MINUS'),
-        ('left', 'TIMES', 'DIVIDE', 'MODULO'),
-        ('right', 'POWER'),
+        ('left', 'PLUS', 'MINUS', 'TAMBAH', 'KURANG'),
+        ('left', 'TIMES', 'DIVIDE', 'MODULO', 'KALI', 'BAGI', 'SISA'),
+        ('right', 'POWER', 'PANGKAT'),
         ('left', 'LBRACKET', 'DOT'),
     )
+
+    def p_identifier(self, p):
+        """identifier : NAME
+                      | TAMBAH
+                      | KURANG
+                      | KALI
+                      | BAGI
+                      | SISA
+                      | PANGKAT"""
+        p[0] = p[1]
 
     def p_program(self, p):
         'program : statements'
@@ -162,23 +172,23 @@ class Parser:
         p[0] = [p[1]]
 
     def p_statement_assign(self, p):
-        'statement : NAME GAS expression SEMI'
+        'statement : identifier GAS expression SEMI'
         p[0] = Assign(p[1], p[3])
 
     def p_statement_list_assign(self, p):
-        'statement : NAME LBRACKET expression RBRACKET GAS expression SEMI'
+        'statement : identifier LBRACKET expression RBRACKET GAS expression SEMI'
         p[0] = ListAssign(Var(p[1]), p[3], p[6])
 
     def p_statement_typed_duit(self, p):
-        'statement : DUIT NAME GAS expression SEMI'
+        'statement : DUIT identifier GAS expression SEMI'
         p[0] = Assign(p[2], p[4], type_name='duit')
 
     def p_statement_typed_omongan(self, p):
-        'statement : OMONGAN NAME GAS expression SEMI'
+        'statement : OMONGAN identifier GAS expression SEMI'
         p[0] = Assign(p[2], p[4], type_name='omongan')
 
     def p_statement_typed_validdecl(self, p):
-        'statement : VALID NAME GAS expression SEMI'
+        'statement : VALID identifier GAS expression SEMI'
         p[0] = Assign(p[2], p[4], type_name='valid')
 
     def p_statement_print(self, p):
@@ -202,15 +212,15 @@ class Parser:
         p[0] = While(p[2], p[3])
 
     def p_statement_function_def(self, p):
-        'statement : FUNGSI NAME LPAREN param_list RPAREN block'
+        'statement : FUNGSI identifier LPAREN param_list RPAREN block'
         p[0] = FunctionDef(p[2], p[4], p[6])
 
     def p_param_list_multiple(self, p):
-        'param_list : param_list COMMA NAME'
+        'param_list : param_list COMMA identifier'
         p[0] = p[1] + [p[3]]
 
     def p_param_list_single(self, p):
-        'param_list : NAME'
+        'param_list : identifier'
         p[0] = [p[1]]
 
     def p_param_list_empty(self, p):
@@ -238,27 +248,27 @@ class Parser:
         p[0] = TryCatch(p[2], p[4])
 
     def p_statement_import(self, p):
-        'statement : IMPOR NAME SEMI'
+        'statement : IMPOR identifier SEMI'
         p[0] = Import(p[2])
 
     def p_statement_import_as(self, p):
-        'statement : IMPOR NAME SEBAGAI NAME SEMI'
+        'statement : IMPOR identifier SEBAGAI identifier SEMI'
         p[0] = Import(p[2], p[4])
 
     def p_statement_import_from(self, p):
-        'statement : DARI NAME IMPOR import_names SEMI'
+        'statement : DARI identifier IMPOR import_names SEMI'
         p[0] = ImportFrom(p[2], p[4])
 
     def p_import_names_multiple(self, p):
-        'import_names : import_names COMMA NAME'
+        'import_names : import_names COMMA identifier'
         p[0] = p[1] + [(p[3], None)]
 
     def p_import_names_single(self, p):
-        'import_names : NAME'
+        'import_names : identifier'
         p[0] = [(p[1], None)]
 
     def p_import_names_as(self, p):
-        'import_names : NAME SEBAGAI NAME'
+        'import_names : identifier SEBAGAI identifier'
         p[0] = [(p[1], p[3])]
 
     def p_block(self, p):
@@ -272,13 +282,20 @@ class Parser:
                       | expression DIVIDE expression
                       | expression MODULO expression
                       | expression POWER expression
+                      | expression TAMBAH expression
+                      | expression KURANG expression
+                      | expression KALI expression
+                      | expression BAGI expression
+                      | expression SISA expression
+                      | expression PANGKAT expression
                       | expression EQEQ expression
                       | expression NEQ expression
                       | expression GT expression
                       | expression LT expression
                       | expression GTE expression
                       | expression LTE expression'''
-        p[0] = BinaryOp(p[2], p[1], p[3])
+        operator = Lexer.word_operators.get(p[2], (None, p[2]))[1]
+        p[0] = BinaryOp(operator, p[1], p[3])
 
     def p_expression_group(self, p):
         'expression : LPAREN expression RPAREN'
@@ -309,19 +326,19 @@ class Parser:
         p[0] = Boolean(False)
 
     def p_expression_name(self, p):
-        'expression : NAME'
+        'expression : identifier'
         p[0] = Var(p[1])
 
     def p_expression_attribute(self, p):
-        'expression : expression DOT NAME'
+        'expression : expression DOT identifier'
         p[0] = AttributeAccess(p[1], p[3])
 
     def p_expression_function_call(self, p):
-        'expression : NAME LPAREN arg_list RPAREN'
+        'expression : identifier LPAREN arg_list RPAREN'
         p[0] = FunctionCall(p[1], p[3])
 
     def p_expression_method_call(self, p):
-        'expression : expression DOT NAME LPAREN arg_list RPAREN'
+        'expression : expression DOT identifier LPAREN arg_list RPAREN'
         p[0] = MethodCall(p[1], p[3], p[5])
 
     def p_arg_list_multiple(self, p):
