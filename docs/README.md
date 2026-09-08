@@ -53,7 +53,7 @@ maupun subpath seperti `/pykasi/`.
 
 ## Playground
 
-`playground.html` adalah editor PyKasi di browser untuk mencoba sintaks inti tanpa
+Playground pada `index.html#playground` adalah editor PyKasi di browser untuk mencoba sintaks inti tanpa
 install Python. Ia mendukung output, variabel, kondisi, perulangan, fungsi, list,
 dictionary, serta operator Bekasi seperti `tambah`, `kali`, dan `bagi`.
 
@@ -68,7 +68,7 @@ Panduan penggunaan, sintaks yang didukung, dan batasan browser ada di
 - `index.html`: konten, contoh kode, output, dan metadata halaman.
 - `assets/style.css`: tema, layout responsif, fokus keyboard, dan reduced motion.
 - `assets/main.js`: pemilihan contoh serta penyalinan teks.
-- `playground.html` dan `assets/playground.*`: editor, output, dan interpreter browser.
+- `assets/playground.*`: editor, output, dan interpreter browser yang dipakai homepage.
 - `assets/logo.svg`: logo PyKasi yang sudah ada.
 - `.nojekyll`: menyajikan file statis apa adanya di GitHub Pages.
 

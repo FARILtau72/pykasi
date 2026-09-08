@@ -1,13 +1,13 @@
 # PyKasi Playground
 
-Playground adalah editor PyKasi yang berjalan langsung di browser. Buka
-[`playground.html`](playground.html) dari hosting statis atau jalankan server lokal:
+Playground adalah editor PyKasi yang berjalan langsung di browser, langsung di
+[homepage PyKasi](index.html#playground). Jalankan server lokal:
 
 ```sh
 python -m http.server 8000 --directory docs
 ```
 
-Lalu buka `http://localhost:8000/playground.html`.
+Lalu buka `http://localhost:8000/#playground`.
 
 ## Cara pakai
 

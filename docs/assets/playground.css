@@ -1,6 +1,7 @@
-.playground-shell { padding-block: 2.75rem 4rem; }
+.playground-shell, .playground-section { padding-block: 2.75rem 4rem; scroll-margin-top: 4rem; }
 .playground-intro { display: flex; justify-content: space-between; align-items: end; gap: 3rem; margin-bottom: 2.2rem; }
-.playground-intro h1 { margin-top: .6rem; font-size: clamp(2.7rem, 5vw, 4.4rem); }
+.playground-intro h1, .playground-intro h2 { margin-top: .6rem; font-size: clamp(2.7rem, 5vw, 4.4rem); }
+.playground-intro h2 span { color: var(--accent); }
 .playground-intro > p { max-width: 26rem; color: var(--muted); font-size: 1rem; }
 .playground { border: 1px solid #52623f; border-radius: .7rem; overflow: hidden; background: #12160f; box-shadow: 0 18px 60px #00000028; }
 .playground-toolbar, .pane-heading, .editor-footer, .output-footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }

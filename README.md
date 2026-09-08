@@ -8,7 +8,7 @@ Bekasi untuk belajar konsep pemrograman. Tulis `bacot`, `danta`, `kagadanta`, da
 
 ## Mulai dari sini
 
-- **Coba langsung di browser:** [`docs/playground.html`](docs/playground.html)
+- **Coba langsung di browser:** [Homepage PyKasi → Playground](docs/index.html#playground)
 - **Kamus sintaks lengkap:** [SINTAKS.md](SINTAKS.md)
 - **Panduan playground:** [docs/PLAYGROUND.md](docs/PLAYGROUND.md)
 
@@ -122,7 +122,7 @@ built-in, dan contoh lanjutan ada di [SINTAKS.md](SINTAKS.md).
 
 ## Playground browser
 
-Playground ada di `docs/playground.html` dan bisa di-host sebagai static site.
+Playground ada langsung di homepage (`docs/index.html#playground`) dan bisa di-host sebagai static site.
 Ia berjalan seluruhnya di browser, tanpa mengirim kode ke server. Gunakan untuk
 mencoba sintaks inti, template contoh, shortcut **Ctrl/Cmd + Enter**, atau membuat
 link berbagi kode. Import Python dan Flask harus dijalankan lewat interpreter
