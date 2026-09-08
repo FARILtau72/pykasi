@@ -119,3 +119,95 @@ Sintaks lama seperti `spill`, `valid`, `hoax`, `kalo_kaga`, dan operator simbol
 tetap tersedia. Tidak perlu mengubah program lama kecuali program itu memakai
 empat kata kunci baru sebagai nama. Fitur import, list, dictionary, fungsi,
 lambda, dan error handling mengikuti [dokumentasi utama](README.md).
+
+## Data: list dan dictionary
+
+List dan dictionary ditulis langsung memakai literal Python. Tidak ada deklarasi
+tipe khusus yang diperlukan untuk keduanya.
+
+```pykasi
+angka gas [4, 7, 2];
+profil gas {"nama": "Faril", "kota": "Bekasi"};
+
+bacot angka[0];
+bacot profil["kota"];
+angka[1] gas 10;
+```
+
+Index list harus angka bulat dan index yang tidak ada akan menghasilkan error.
+Dictionary memakai key yang ada; key yang tidak ditemukan juga menghasilkan error.
+
+## Fungsi, lambda, dan built-in
+
+```pykasi
+fungsi kali_dua(angka) {
+    balikin angka kali 2;
+}
+
+duit hasil gas kali_dua(8);
+bacot hasil;
+
+pembuat gas lamda (a, b) => a tambah b;
+```
+
+`balikin;` tanpa nilai sah dan mengembalikan `None`. `lamda` membuat representasi
+fungsi anonim; gunakan fungsi bernama untuk alur pemanggilan yang lengkap dan stabil.
+
+| Fungsi | Makna Python |
+| --- | --- |
+| `panjang(x)` | `len(x)` |
+| `tipe(x)` | `type(x)` |
+| `bentuk(x)` | `str(x)` |
+| `hitung(x)` | `int(x)` |
+| `desimal(x)` | `float(x)` |
+| `maks(...)` / `min(...)` | nilai terbesar / terkecil |
+| `jumlah(x)` | `sum(x)` |
+| `urutkan(x)` | `sorted(x)` |
+| `balik(x)` | `reversed(x)` |
+| `rentang(...)` | `range(...)` |
+
+## Coba, tangkep, terus, berhenti
+
+```pykasi
+coba {
+    duit hasil gas 10 bagi 0;
+} tangkep {
+    bacot "Jangan bagi nol, bre.";
+}
+
+duit angka gas 0;
+puterin angka < 5 {
+    angka gas angka tambah 1;
+    kalo angka == 3 { terus; }
+    kalo angka == 5 { berhenti; }
+    bacot angka;
+}
+```
+
+`coba` menangkap error yang muncul di bloknya lalu menjalankan `tangkep`. Gunakan
+`terus` dan `berhenti` hanya di dalam `puterin`.
+
+## Import Python yang dibatasi
+
+```pykasi
+impor math;
+dari datetime impor datetime sebagai Waktu;
+
+bacot math.sqrt(81);
+```
+
+Import dibatasi allowlist keamanan. Contohnya mencakup `math`, `random`,
+`datetime`, `json`, `collections`, `itertools`, `statistics`, `flask`, dan beberapa
+modul utilitas lain. Modul berisiko seperti `os`, `sys`, `subprocess`, `eval`, serta
+`exec` tidak bisa diimpor. Daftar sumber kebenarannya ada di `SAFE_MODULES` pada
+`pykasi/interpreter.py`.
+
+## Kesalahan umum
+
+| Gejala | Cek dulu |
+| --- | --- |
+| `Sintaks salah` | Pernyataan sederhana harus berakhir dengan `;` |
+| `Variabel ... belum ada` | Isi variabel dengan `gas` sebelum dipakai |
+| Tipe data salah | Nilai baru harus sesuai deklarasi `duit`, `omongan`, atau `danta` |
+| Module tidak boleh di-import | Gunakan modul pada allowlist atau Python biasa untuk kebutuhan sistem |
+| Playground beda kemampuan | Coba `python main.py file.bks`; lihat `docs/PLAYGROUND.md` |

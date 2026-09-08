@@ -51,11 +51,24 @@ commit yang memuatnya selesai dipublikasikan oleh Pages.
 Seluruh URL aset bersifat relatif sehingga homepage bisa disajikan di root domain
 maupun subpath seperti `/pykasi/`.
 
+## Playground
+
+Playground pada `index.html#playground` adalah editor PyKasi di browser untuk mencoba sintaks inti tanpa
+install Python. Ia mendukung output, variabel, kondisi, perulangan, fungsi, list,
+dictionary, serta operator Bekasi seperti `tambah`, `kali`, dan `bagi`.
+
+Import dan Flask tetap perlu interpreter Python lokal. Playground sengaja berjalan
+sepenuhnya di perangkat pengunjung.
+
+Panduan penggunaan, sintaks yang didukung, dan batasan browser ada di
+[PLAYGROUND.md](PLAYGROUND.md).
+
 ## Struktur
 
 - `index.html`: konten, contoh kode, output, dan metadata halaman.
 - `assets/style.css`: tema, layout responsif, fokus keyboard, dan reduced motion.
 - `assets/main.js`: pemilihan contoh serta penyalinan teks.
+- `assets/playground.*`: editor, output, dan interpreter browser yang dipakai homepage.
 - `assets/logo.svg`: logo PyKasi yang sudah ada.
 - `.nojekyll`: menyajikan file statis apa adanya di GitHub Pages.
 
